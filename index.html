@@ -1,2045 +1,2235 @@
 <!DOCTYPE html>
-<html lang="en" style="color-scheme: light only;">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ICCC | Institute for Cyber-defence, Cross-border IP & Collaborative Tech</title>
-  <meta name="description" content="Institute for Cyber-defence, Cross-border IP & Collaborative Tech. Bridging EMEA and Ukraine through resilient DefenceTech, legal sovereignty, and mutual technological exchange.">
-
+  <meta name="description" content="Research Institute bridging EMEA and Ukraine through resilient DefenceTech, legal sovereignty, and technological exchange.">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  
   <style>
-    /* ════════════════════════════════════════════════════════════════
-       INSTITUTIONAL ACADEMIC DESIGN SYSTEM
-       Inspired by university research institute pages.
-       Soft, professional, editorial. Navy · Blue · Red · White.
-       ════════════════════════════════════════════════════════════════ */
     :root {
-      --navy: #0A1B3D;
-      --navy-soft: #1C3360;
-      --navy-light: #EBEFF6;
-      --blue: #0E6BA8;
-      --blue-dark: #0A5586;
-      --blue-light: #E6F1F8;
-      --red: #BD1721;
-      --red-light: #FBEAEB;
-      --white: #FFFFFF;
-      --off-white: #F5F7FA;
-      --gray-100: #EEF1F5;
-      --gray-200: #DDE3EA;
-      --gray-300: #C4CDD8;
-      --text: #1A2238;
-      --text-soft: #4A5568;
-      --text-muted: #6B7280;
-
-      --font-sans: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-
+      --color-navy: #000036;
+      --color-blue: #047eaf;
+      --color-red: #bd1721;
+      --color-claret: #7a0536;
+      --color-slate: #34516c;
+      --color-light-slate: #577a9b;
+      --color-charcoal: #333333;
+      --color-white: #ffffff;
+      --color-bg-alt: #eef0f1;
+      --color-text: #2f3235;
+      --color-gold: #f2be1a;
+      --color-lake: #0099d2;
+      --color-forest: #006250;
+      
+      --font-sans: 'Figtree', 'Segoe UI', Arial, sans-serif;
+      --font-serif: 'Source Serif 4', Georgia, serif;
+      
+      --shadow-sm: 0 2px 8px rgba(0, 0, 54, 0.08);
+      --shadow-md: 0 8px 24px rgba(0, 0, 54, 0.12);
+      --shadow-lg: 0 16px 48px rgba(0, 0, 54, 0.16);
+      
       --radius-sm: 4px;
-      --radius-base: 8px;
-      --radius-lg: 12px;
-      --radius-xl: 20px;
-
-      --shadow-sm: 0 1px 3px rgba(10, 27, 61, 0.06);
-      --shadow-md: 0 4px 16px rgba(10, 27, 61, 0.08);
-      --shadow-lg: 0 12px 32px rgba(10, 27, 61, 0.12);
-
-      --container-max: 1200px;
-      --gutter: 24px;
-
-      --ease: 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+      --radius-md: 8px;
+      --radius-lg: 16px;
     }
 
-    html {
-      color-scheme: light only;
-      background-color: var(--white);
-      color: var(--text);
-      font-family: var(--font-sans);
-      line-height: 1.6;
-      scroll-behavior: smooth;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    *, *::before, *::after {
+    * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      background-color: var(--white);
-      color: var(--text);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      overflow-x: hidden;
-    }
-
-    /* ═══ TYPOGRAPHY ═══ */
-    h1, h2, h3, h4 {
       font-family: var(--font-sans);
-      font-weight: 800;
-      line-height: 1.15;
-      letter-spacing: -0.015em;
-      color: var(--navy);
+      color: var(--color-text);
+      background: var(--color-white);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
     }
 
-    h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 800; letter-spacing: -0.02em; }
-    h2 { font-size: clamp(1.6rem, 3.2vw, 2.4rem); font-weight: 800; }
-    h3 { font-size: clamp(1.15rem, 1.8vw, 1.4rem); font-weight: 700; }
-    h4 { font-size: 1rem; font-weight: 700; }
-
-    p {
-      font-size: 1.05rem;
-      line-height: 1.7;
-      color: var(--text-soft);
-      max-width: 68ch;
-    }
-
-    .lead {
-      font-size: 1.2rem;
-      line-height: 1.65;
-      color: var(--text-soft);
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--blue);
-      margin-bottom: 1rem;
-    }
-
-    .eyebrow::before {
-      content: '';
-      width: 28px;
-      height: 2px;
-      background: var(--blue);
-    }
-
-    .eyebrow--light { color: rgba(255, 255, 255, 0.8); }
-    .eyebrow--light::before { background: rgba(255, 255, 255, 0.6); }
-
-    /* ═══ LAYOUT ═══ */
-    .container {
-      width: 100%;
-      max-width: var(--container-max);
-      margin: 0 auto;
-      padding: 0 var(--gutter);
-    }
-
-    .container--narrow {
-      max-width: 860px;
-    }
-
-    section {
-      padding: 5rem 0;
-    }
-
-    .section--light { background-color: var(--white); }
-    .section--alt { background-color: var(--off-white); }
-    .section--navy { background-color: var(--navy); color: var(--white); }
-    .section--navy h1, .section--navy h2, .section--navy h3 { color: var(--white); }
-    .section--navy p { color: rgba(255, 255, 255, 0.78); }
-
-    /* ═══ SCROLL REVEAL ═══ */
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
-    }
-    .reveal.is-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .reveal--d1 { transition-delay: 0.08s; }
-    .reveal--d2 { transition-delay: 0.16s; }
-    .reveal--d3 { transition-delay: 0.24s; }
-
-    @media (prefers-reduced-motion: reduce) {
-      .reveal { opacity: 1; transform: none; transition: none; }
-    }
-
-    /* ═══ BUTTONS ═══ */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      padding: 0.9rem 1.75rem;
+    h1, h2, h3, h4, h5, h6 {
       font-family: var(--font-sans);
-      font-size: 0.95rem;
+      color: var(--color-navy);
       font-weight: 700;
+      line-height: 1.2;
+    }
+
+    h1 { font-size: clamp(2.2rem, 5vw, 3.75rem); font-weight: 800; letter-spacing: -0.02em; }
+    h2 { font-size: clamp(1.75rem, 3.5vw, 2.5rem); font-weight: 700; }
+    h3 { font-size: 1.35rem; font-weight: 600; }
+    h4 { font-size: 1.1rem; font-weight: 600; }
+
+    p { line-height: 1.6; }
+
+    a {
+      color: var(--color-blue);
       text-decoration: none;
-      border-radius: var(--radius-base);
-      border: 2px solid transparent;
+      transition: color 0.2s;
+    }
+
+    a:hover { color: var(--color-red); }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ═══════════════════════════════════════════
+       TOP BAR (University-style quick links)
+       ═══════════════════════════════════════════ */
+    .top-bar {
+      background: var(--color-navy);
+      color: var(--color-white);
+      font-size: 0.8rem;
+      padding: 0.5rem 0;
+    }
+
+    .top-bar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-bar-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .top-bar-links a {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.78rem;
+    }
+
+    .top-bar-links a:hover {
+      color: var(--color-gold);
+    }
+
+    .lang-switch-top {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .lang-btn-top {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: rgba(255, 255, 255, 0.85);
+      padding: 0.25rem 0.75rem;
+      font-size: 0.72rem;
       cursor: pointer;
-      transition: all var(--ease);
-      line-height: 1;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-sans);
+      font-weight: 600;
+      transition: all 0.2s;
     }
 
-    .btn--primary {
-      background: var(--blue);
-      color: var(--white);
-      border-color: var(--blue);
-    }
-    .btn--primary:hover {
-      background: var(--blue-dark);
-      border-color: var(--blue-dark);
-      transform: translateY(-1px);
-      box-shadow: var(--shadow-md);
+    .lang-btn-top.active {
+      background: var(--color-white);
+      color: var(--color-navy);
+      border-color: var(--color-white);
     }
 
-    .btn--outline {
-      background: transparent;
-      color: var(--navy);
-      border-color: var(--navy);
-    }
-    .btn--outline:hover {
-      background: var(--navy);
-      color: var(--white);
-    }
-
-    .btn--light {
-      background: var(--white);
-      color: var(--navy);
-      border-color: var(--white);
-    }
-    .btn--light:hover {
-      background: var(--navy-light);
-      border-color: var(--navy-light);
-    }
-
-    .btn--ghost-light {
-      background: transparent;
-      color: var(--white);
-      border-color: rgba(255, 255, 255, 0.4);
-    }
-    .btn--ghost-light:hover {
-      background: rgba(255, 255, 255, 0.12);
-      border-color: var(--white);
-    }
-
-    .btn svg {
-      width: 16px;
-      height: 16px;
-      transition: transform var(--ease);
-    }
-    .btn:hover svg {
-      transform: translateX(3px);
-    }
-
-    /* ═══ HEADER ═══ */
-    .site-header {
+    /* ═══════════════════════════════════════════
+       MAIN HEADER
+       ═══════════════════════════════════════════ */
+    .main-header {
+      background: var(--color-white);
+      border-bottom: 1px solid #e5e6e9;
       position: sticky;
       top: 0;
-      z-index: 200;
-      background: var(--white);
-      border-bottom: 1px solid var(--gray-200);
-      transition: box-shadow var(--ease);
-    }
-
-    .site-header.is-scrolled {
+      z-index: 100;
       box-shadow: var(--shadow-sm);
     }
 
     .header-inner {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 2rem;
+      align-items: center;
       padding: 1rem 0;
     }
 
-    .brand {
+    .logo {
       display: flex;
       align-items: center;
-      gap: 0.85rem;
+      gap: 0.9rem;
       text-decoration: none;
-      color: var(--navy);
-      flex-shrink: 0;
     }
 
-    .brand-mark {
-      width: 44px;
-      height: 44px;
-      border-radius: var(--radius-base);
-      background: var(--navy);
-      color: var(--white);
+    .logo-mark {
+      width: 56px;
+      height: 56px;
+      background: var(--color-navy);
+      color: var(--color-white);
       display: grid;
       place-items: center;
-      font-weight: 900;
-      font-size: 0.85rem;
-      letter-spacing: -0.02em;
+      font-weight: 800;
+      font-size: 0.9rem;
+      border-radius: var(--radius-sm);
+      letter-spacing: 0.05em;
     }
 
-    .brand-text {
+    .logo-text {
       display: flex;
       flex-direction: column;
-      line-height: 1.15;
     }
 
-    .brand-name {
+    .logo-title {
       font-weight: 800;
-      font-size: 1.1rem;
+      font-size: 1.25rem;
+      color: var(--color-navy);
+      line-height: 1;
       letter-spacing: -0.01em;
     }
 
-    .brand-sub {
+    .logo-sub {
       font-size: 0.7rem;
-      color: var(--text-muted);
-      max-width: 240px;
+      color: var(--color-light-slate);
+      margin-top: 4px;
+      max-width: 260px;
       line-height: 1.3;
     }
 
-    .header-nav {
+    .nav-main {
       display: flex;
       align-items: center;
-      gap: 2rem;
-      margin-left: auto;
+      gap: 2.5rem;
     }
 
-    .header-nav ul {
+    .nav-links-main {
       display: flex;
+      gap: 2rem;
       list-style: none;
-      gap: 1.75rem;
     }
 
-    .header-nav a {
-      text-decoration: none;
-      color: var(--text-soft);
-      font-size: 0.9rem;
-      font-weight: 600;
-      padding: 0.25rem 0;
+    .nav-links-main a {
+      color: var(--color-navy);
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 0.5rem 0;
       position: relative;
-      transition: color var(--ease);
     }
 
-    .header-nav a::after {
+    .nav-links-main a::after {
       content: '';
       position: absolute;
+      bottom: 0;
       left: 0;
-      bottom: -2px;
-      width: 0;
+      right: 0;
       height: 2px;
-      background: var(--blue);
-      transition: width var(--ease);
+      background: var(--color-blue);
+      transform: scaleX(0);
+      transition: transform 0.3s;
     }
 
-    .header-nav a:hover {
-      color: var(--navy);
-    }
-    .header-nav a:hover::after {
-      width: 100%;
+    .nav-links-main a:hover {
+      color: var(--color-blue);
     }
 
-    .lang-switch {
-      display: flex;
+    .nav-links-main a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .btn-primary {
+      background: var(--color-blue);
+      color: var(--color-white);
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+      display: inline-flex;
       align-items: center;
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius-base);
-      overflow: hidden;
+      gap: 0.5rem;
     }
 
-    .lang-btn {
-      border: none;
-      background: transparent;
-      padding: 0.4rem 0.85rem;
-      font-family: var(--font-sans);
-      font-size: 0.78rem;
-      font-weight: 700;
-      color: var(--text-muted);
-      cursor: pointer;
-      transition: all var(--ease);
+    .btn-primary:hover {
+      background: var(--color-slate);
+      color: var(--color-white);
     }
 
-    .lang-btn + .lang-btn {
-      border-left: 1px solid var(--gray-200);
-    }
-
-    .lang-btn.active {
-      background: var(--navy);
-      color: var(--white);
-    }
-
-    .lang-btn:not(.active):hover {
-      background: var(--gray-100);
-    }
-
-    /* ═══ BREADCRUMB ═══ */
+    /* ═══════════════════════════════════════════
+       BREADCRUMB
+       ═══════════════════════════════════════════ */
     .breadcrumb {
-      background: var(--white);
-      border-bottom: 1px solid var(--gray-200);
+      background: var(--color-bg-alt);
       padding: 0.75rem 0;
+      border-bottom: 1px solid #d1d3e1;
     }
 
-    .breadcrumb ul {
+    .breadcrumb-list {
       display: flex;
-      flex-wrap: wrap;
+      gap: 0.5rem;
       list-style: none;
-      gap: 0.4rem;
-      font-size: 0.8rem;
-      color: var(--text-muted);
+      font-size: 0.82rem;
     }
 
-    .breadcrumb li {
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
+    .breadcrumb-list li:not(:last-child)::after {
+      content: '›';
+      margin-left: 0.5rem;
+      color: var(--color-light-slate);
     }
 
-    .breadcrumb li + li::before {
-      content: '/';
-      color: var(--gray-300);
-      font-weight: 400;
+    .breadcrumb-list a {
+      color: var(--color-light-slate);
     }
 
-    .breadcrumb a {
-      color: var(--blue);
-      text-decoration: none;
-    }
-    .breadcrumb a:hover {
-      text-decoration: underline;
+    .breadcrumb-list li[aria-current="page"] {
+      color: var(--color-navy);
+      font-weight: 600;
     }
 
-    /* ═══ HERO ═══ */
+    /* ═══════════════════════════════════════════
+       HERO SECTION
+       ═══════════════════════════════════════════ */
     .hero {
       position: relative;
-      background: var(--navy);
-      color: var(--white);
-      padding: 7rem 0 6rem;
+      background: linear-gradient(135deg, var(--color-navy) 0%, #1a2850 50%, var(--color-slate) 100%);
+      color: var(--color-white);
+      padding: 6rem 0 7rem;
       overflow: hidden;
     }
 
     .hero::before {
       content: '';
       position: absolute;
-      inset: 0;
-      background-image:
-        radial-gradient(circle at 20% 20%, rgba(14, 107, 168, 0.28) 0%, transparent 45%),
-        radial-gradient(circle at 85% 75%, rgba(189, 23, 33, 0.16) 0%, transparent 40%),
-        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
-      background-size: auto, auto, 48px 48px, 48px 48px;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: 
+        radial-gradient(circle at 20% 30%, rgba(4, 126, 175, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(189, 23, 33, 0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background-image: 
+        linear-gradient(45deg, transparent 48%, rgba(255, 255, 255, 0.03) 49%, rgba(255, 255, 255, 0.03) 51%, transparent 52%),
+        linear-gradient(-45deg, transparent 48%, rgba(255, 255, 255, 0.03) 49%, rgba(255, 255, 255, 0.03) 51%, transparent 52%);
+      background-size: 30px 30px;
+      opacity: 0.6;
       pointer-events: none;
     }
 
     .hero-inner {
       position: relative;
-      z-index: 1;
-      max-width: 820px;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: rgba(242, 190, 26, 0.15);
+      color: var(--color-gold);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(242, 190, 26, 0.3);
     }
 
     .hero h1 {
-      color: var(--white);
+      color: var(--color-white);
       margin-bottom: 1.5rem;
     }
 
-    .hero h1 em {
-      font-style: normal;
-      color: #7DC4F0;
+    .hero h1 .highlight {
+      color: var(--color-gold);
+      font-style: italic;
+      font-family: var(--font-serif);
+      font-weight: 400;
     }
 
-    .hero-subtitle {
-      font-size: 1.25rem;
-      line-height: 1.6;
-      color: rgba(255, 255, 255, 0.8);
-      max-width: 620px;
+    .hero-desc {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 540px;
       margin-bottom: 2.5rem;
     }
 
     .hero-actions {
       display: flex;
-      flex-wrap: wrap;
       gap: 1rem;
-      margin-bottom: 3.5rem;
-    }
-
-    .hero-meta {
-      display: flex;
       flex-wrap: wrap;
-      gap: 2.5rem;
-      padding-top: 2.5rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.15);
     }
 
-    .hero-meta-item {
-      display: flex;
-      flex-direction: column;
-      gap: 0.2rem;
-    }
-
-    .hero-meta-value {
-      font-size: 1.35rem;
-      font-weight: 800;
-      color: var(--white);
-      letter-spacing: -0.01em;
-    }
-
-    .hero-meta-label {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: rgba(255, 255, 255, 0.55);
-      font-weight: 600;
-    }
-
-    /* ═══ INTRO / ABOUT ═══ */
-    .intro-grid {
-      display: grid;
-      grid-template-columns: 1.4fr 1fr;
-      gap: 4rem;
-      align-items: start;
-    }
-
-    .intro-body p + p {
-      margin-top: 1.25rem;
-    }
-
-    .intro-body .reveal-more {
-      overflow: hidden;
-      max-height: 0;
-      transition: max-height 0.6s var(--ease);
-    }
-
-    .intro-body .reveal-more.is-open {
-      max-height: 1200px;
-    }
-
-    .read-more-btn {
+    .btn-hero {
+      background: var(--color-white);
+      color: var(--color-navy);
+      padding: 1rem 2rem;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: all 0.25s;
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
-      margin-top: 1.25rem;
-      padding: 0;
-      background: none;
-      border: none;
-      color: var(--blue);
-      font-family: var(--font-sans);
-      font-size: 0.9rem;
-      font-weight: 700;
-      cursor: pointer;
+      gap: 0.6rem;
     }
 
-    .read-more-btn:hover {
-      color: var(--blue-dark);
+    .btn-hero:hover {
+      background: var(--color-gold);
+      color: var(--color-navy);
+      transform: translateY(-2px);
     }
 
-    .read-more-btn svg {
-      width: 14px;
-      height: 14px;
-      transition: transform var(--ease);
+    .btn-hero-outline {
+      background: transparent;
+      color: var(--color-white);
+      padding: 1rem 2rem;
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.25s;
     }
 
-    .read-more-btn.is-open svg {
-      transform: rotate(180deg);
+    .btn-hero-outline:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: var(--color-white);
+      color: var(--color-white);
     }
 
-    /* Info panel on the right of intro */
-    .info-panel {
-      background: var(--navy-light);
+    .hero-stats {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
       border-radius: var(--radius-lg);
-      padding: 2rem;
-      border: 1px solid var(--gray-200);
+      padding: 2.5rem;
+      position: relative;
     }
 
-    .info-panel h3 {
-      font-size: 1rem;
-      text-transform: uppercase;
+    .hero-stats-title {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 0.85rem;
+      color: var(--color-gold);
       letter-spacing: 0.1em;
-      color: var(--blue);
-      margin-bottom: 1.25rem;
-      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    .info-panel dl {
+    .stat-row {
       display: flex;
-      flex-direction: column;
-      gap: 1.1rem;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    .info-panel dt {
-      font-size: 0.72rem;
+    .stat-row:last-child {
+      border-bottom: none;
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-muted);
-      font-weight: 700;
-      margin-bottom: 0.15rem;
+      color: rgba(255, 255, 255, 0.6);
+      font-weight: 500;
     }
 
-    .info-panel dd {
+    .stat-value {
+      font-family: var(--font-serif);
       font-size: 1rem;
-      font-weight: 700;
-      color: var(--navy);
+      font-weight: 600;
+      color: var(--color-white);
     }
 
-    /* ═══ THREE PILLARS (USP-style colored cards) ═══ */
-    .pillars-header {
-      max-width: 720px;
-      margin-bottom: 3rem;
+    .stat-value.accent {
+      color: var(--color-gold);
+    }
+
+    .stat-badge {
+      display: inline-block;
+      background: rgba(0, 210, 80, 0.15);
+      color: #4ade80;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION: USP (Three pillars short form)
+       ═══════════════════════════════════════════ */
+    .usp-section {
+      background: var(--color-navy);
+      color: var(--color-white);
+      padding: 4rem 0;
+    }
+
+    .usp-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      list-style: none;
+    }
+
+    .usp-item {
+      padding: 2.5rem 2rem;
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+      transition: background 0.3s;
+    }
+
+    .usp-item:last-child {
+      border-right: none;
+    }
+
+    .usp-item:hover {
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .usp-number {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 3rem;
+      color: var(--color-gold);
+      line-height: 1;
+      margin-bottom: 1rem;
+      font-weight: 400;
+    }
+
+    .usp-title {
+      font-size: 1.35rem;
+      color: var(--color-white);
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+    }
+
+    .usp-desc {
+      font-size: 0.92rem;
+      color: rgba(255, 255, 255, 0.75);
+      line-height: 1.6;
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION: PILLARS (Detailed)
+       ═══════════════════════════════════════════ */
+    .pillars-section {
+      padding: 6rem 0;
+      background: var(--color-white);
+    }
+
+    .section-header {
+      max-width: 760px;
+      margin: 0 auto 4rem;
+      text-align: center;
+    }
+
+    .section-kicker {
+      display: inline-block;
+      color: var(--color-blue);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .section-kicker::before,
+    .section-kicker::after {
+      content: '';
+      display: inline-block;
+      width: 30px;
+      height: 1px;
+      background: var(--color-blue);
+      vertical-align: middle;
+      margin: 0 0.75rem;
+    }
+
+    .section-desc {
+      font-size: 1.05rem;
+      color: var(--color-light-slate);
+      margin-top: 1rem;
+      line-height: 1.7;
     }
 
     .pillars-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
+      gap: 2rem;
     }
 
     .pillar-card {
-      position: relative;
-      border-radius: var(--radius-lg);
+      background: var(--color-white);
+      border: 1px solid #e5e6e9;
+      border-radius: var(--radius-md);
       padding: 2.5rem 2rem;
-      color: var(--white);
+      transition: all 0.3s;
+      position: relative;
       overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      min-height: 320px;
-      transition: transform var(--ease), box-shadow var(--ease);
+    }
+
+    .pillar-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--color-blue);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s;
+    }
+
+    .pillar-card:nth-child(2)::before {
+      background: var(--color-red);
+    }
+
+    .pillar-card:nth-child(3)::before {
+      background: var(--color-forest);
     }
 
     .pillar-card:hover {
       transform: translateY(-4px);
-      box-shadow: var(--shadow-lg);
+      box-shadow: var(--shadow-md);
+      border-color: transparent;
     }
 
-    .pillar-card--navy { background: var(--navy); }
-    .pillar-card--blue { background: var(--blue); }
-    .pillar-card--red  { background: var(--red); }
-
-    .pillar-card::after {
-      content: '';
-      position: absolute;
-      right: -40px;
-      bottom: -40px;
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.07);
-      pointer-events: none;
+    .pillar-card:hover::before {
+      transform: scaleX(1);
     }
 
-    .pillar-index {
-      font-size: 0.75rem;
-      font-weight: 800;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.65);
+    .pillar-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--color-bg-alt);
+      border-radius: var(--radius-md);
+      display: grid;
+      place-items: center;
       margin-bottom: 1.5rem;
+      color: var(--color-blue);
+    }
+
+    .pillar-card:nth-child(2) .pillar-icon { color: var(--color-red); }
+    .pillar-card:nth-child(3) .pillar-icon { color: var(--color-forest); }
+
+    .pillar-tag {
+      display: inline-block;
+      background: var(--color-bg-alt);
+      color: var(--color-navy);
+      padding: 0.25rem 0.75rem;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
     }
 
     .pillar-card h3 {
-      color: var(--white);
-      font-size: 1.5rem;
-      margin-bottom: 0.75rem;
+      margin-bottom: 1rem;
     }
 
     .pillar-card p {
-      color: rgba(255, 255, 255, 0.85);
-      font-size: 0.98rem;
-      line-height: 1.6;
-      flex-grow: 1;
+      color: var(--color-light-slate);
+      font-size: 0.95rem;
+      line-height: 1.65;
     }
 
-    .pillar-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      margin-top: 1.75rem;
-      color: var(--white);
-      font-weight: 700;
-      font-size: 0.85rem;
-      text-decoration: none;
-      letter-spacing: 0.02em;
+    /* ═══════════════════════════════════════════
+       SECTION: FOCUS / JURISDICTION
+       ═══════════════════════════════════════════ */
+    .focus-section {
+      background: var(--color-bg-alt);
+      padding: 6rem 0;
+      position: relative;
     }
 
-    .pillar-link svg {
-      width: 14px;
-      height: 14px;
-      transition: transform var(--ease);
-    }
-    .pillar-link:hover svg {
-      transform: translateX(3px);
-    }
-
-    /* ═══ FOCUS / STATS ═══ */
-    .focus-grid {
+    .focus-layout {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 4rem;
       align-items: center;
     }
 
-    .focus-stats {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
-    .stat-card {
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius-lg);
-      padding: 1.5rem;
-    }
-
-    .stat-value {
-      font-size: 1.75rem;
-      font-weight: 800;
-      color: var(--navy);
-      letter-spacing: -0.02em;
-      line-height: 1.1;
-      margin-bottom: 0.25rem;
-    }
-
-    .stat-label {
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-muted);
-      font-weight: 700;
-    }
-
-    /* ═══ ACCORDION ═══ */
-    .accordion {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      background: var(--white);
-    }
-
-    .accordion details {
-      border-bottom: 1px solid var(--gray-200);
-    }
-
-    .accordion details:last-child {
-      border-bottom: none;
-    }
-
-    .accordion summary {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 1.25rem 1.5rem;
-      cursor: pointer;
-      font-weight: 700;
-      color: var(--navy);
-      font-size: 1.02rem;
-      list-style: none;
-      transition: background var(--ease);
-    }
-
-    .accordion summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .accordion summary:hover {
-      background: var(--off-white);
-    }
-
-    .accordion summary::after {
-      content: '+';
-      font-size: 1.4rem;
-      font-weight: 400;
-      color: var(--blue);
-      line-height: 1;
-      transition: transform var(--ease);
-    }
-
-    .accordion details[open] summary::after {
-      content: '−';
-    }
-
-    .accordion .accordion-content {
-      padding: 0 1.5rem 1.5rem;
-      color: var(--text-soft);
-      font-size: 0.98rem;
-      line-height: 1.7;
-    }
-
-    .accordion .accordion-content p + p {
-      margin-top: 0.75rem;
-    }
-
-    /* ═══ TEAM ═══ */
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .person-card {
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius-lg);
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      transition: box-shadow var(--ease), transform var(--ease);
-    }
-
-    .person-card:hover {
-      box-shadow: var(--shadow-md);
-      transform: translateY(-2px);
-    }
-
-    .person-avatar {
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      font-weight: 800;
-      font-size: 1.25rem;
-      color: var(--white);
+    .focus-content .section-kicker {
       margin-bottom: 1rem;
     }
 
-    .person-avatar--navy { background: var(--navy); }
-    .person-avatar--blue { background: var(--blue); }
-    .person-avatar--red  { background: var(--red); }
-    .person-avatar--soft { background: var(--navy-soft); }
+    .focus-content .section-kicker::before,
+    .focus-content .section-kicker::after {
+      display: none;
+    }
+
+    .focus-content h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    .focus-content p {
+      color: var(--color-light-slate);
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+
+    .focus-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .focus-tag {
+      background: var(--color-white);
+      color: var(--color-navy);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.82rem;
+      font-weight: 600;
+      border: 1px solid #d1d3e1;
+    }
+
+    .focus-visual {
+      background: var(--color-navy);
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+      color: var(--color-white);
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .focus-visual::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(242, 190, 26, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .focus-visual-title {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 0.85rem;
+      color: var(--color-gold);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .focus-map {
+      position: relative;
+      z-index: 2;
+      aspect-ratio: 1;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .map-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .map-row:last-child { border-bottom: none; }
+
+    .map-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .map-value {
+      font-weight: 600;
+      color: var(--color-white);
+      font-size: 0.95rem;
+    }
+
+    .map-value.accent {
+      color: var(--color-gold);
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION: PROJECTS (Slider-like cards)
+       ═══════════════════════════════════════════ */
+    .projects-section {
+      padding: 6rem 0;
+      background: var(--color-white);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .project-card {
+      border: 1px solid #e5e6e9;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: all 0.3s;
+      background: var(--color-white);
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: transparent;
+    }
+
+    .project-image {
+      height: 180px;
+      background: linear-gradient(135deg, var(--color-slate), var(--color-navy));
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+    }
+
+    .project-image::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: 
+        radial-gradient(circle at 30% 40%, rgba(242, 190, 26, 0.1) 0%, transparent 50%),
+        linear-gradient(45deg, transparent 48%, rgba(255, 255, 255, 0.05) 49%, rgba(255, 255, 255, 0.05) 51%, transparent 52%);
+      background-size: 100% 100%, 20px 20px;
+    }
+
+    .project-image-icon {
+      position: relative;
+      z-index: 2;
+      width: 64px;
+      height: 64px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--color-white);
+    }
+
+    .project-card:nth-child(2) .project-image {
+      background: linear-gradient(135deg, var(--color-claret), var(--color-red));
+    }
+
+    .project-card:nth-child(3) .project-image {
+      background: linear-gradient(135deg, var(--color-forest), #004d3d);
+    }
+
+    .project-content {
+      padding: 1.75rem;
+    }
+
+    .project-tag {
+      display: inline-block;
+      background: var(--color-bg-alt);
+      color: var(--color-blue);
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .project-card:nth-child(2) .project-tag {
+      color: var(--color-red);
+    }
+
+    .project-card:nth-child(3) .project-tag {
+      color: var(--color-forest);
+    }
+
+    .project-content h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    .project-content p {
+      font-size: 0.88rem;
+      color: var(--color-light-slate);
+      line-height: 1.6;
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION: LEADERSHIP / PEOPLE
+       ═══════════════════════════════════════════ */
+    .people-section {
+      background: var(--color-bg-alt);
+      padding: 6rem 0;
+    }
+
+    .people-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .person-card {
+      background: var(--color-white);
+      border-radius: var(--radius-md);
+      padding: 1.75rem;
+      text-align: center;
+      transition: all 0.3s;
+      border: 1px solid transparent;
+    }
+
+    .person-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-blue);
+    }
+
+    .person-avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--color-blue), var(--color-slate));
+      margin: 0 auto 1.25rem;
+      display: grid;
+      place-items: center;
+      color: var(--color-white);
+      font-weight: 700;
+      font-size: 1.5rem;
+      font-family: var(--font-serif);
+      font-style: italic;
+    }
+
+    .person-card:nth-child(2) .person-avatar {
+      background: linear-gradient(135deg, var(--color-red), var(--color-claret));
+    }
+
+    .person-card:nth-child(3) .person-avatar {
+      background: linear-gradient(135deg, var(--color-forest), #004d3d);
+    }
+
+    .person-card:nth-child(4) .person-avatar {
+      background: linear-gradient(135deg, var(--color-gold), #d4a017);
+      color: var(--color-navy);
+    }
 
     .person-name {
-      font-weight: 700;
-      color: var(--navy);
-      font-size: 1rem;
-      line-height: 1.3;
-      margin-bottom: 0.2rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--color-navy);
+      margin-bottom: 0.25rem;
     }
 
     .person-role {
-      font-size: 0.85rem;
-      color: var(--text-muted);
+      font-size: 0.82rem;
+      color: var(--color-light-slate);
       line-height: 1.4;
     }
 
-    /* ═══ CONTACT ═══ */
-    .contact-grid {
+    /* ═══════════════════════════════════════════
+       SECTION: ACCORDION (FAQ/SDG style)
+       ═══════════════════════════════════════════ */
+    .accordion-section {
+      padding: 5rem 0;
+      background: var(--color-white);
+    }
+
+    .accordion {
+      max-width: 820px;
+      margin: 3rem auto 0;
+    }
+
+    .accordion-item {
+      border-bottom: 1px solid #e5e6e9;
+    }
+
+    .accordion-btn {
+      width: 100%;
+      background: transparent;
+      border: none;
+      padding: 1.5rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      text-align: left;
+      font-family: var(--font-sans);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--color-navy);
+      transition: color 0.2s;
+    }
+
+    .accordion-btn:hover {
+      color: var(--color-blue);
+    }
+
+    .accordion-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--color-bg-alt);
       display: grid;
-      grid-template-columns: 1fr 1.2fr;
+      place-items: center;
+      transition: transform 0.3s, background 0.3s;
+      flex-shrink: 0;
+      margin-left: 1rem;
+    }
+
+    .accordion-btn[aria-expanded="true"] .accordion-icon {
+      background: var(--color-blue);
+      color: var(--color-white);
+      transform: rotate(180deg);
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+
+    .accordion-content-inner {
+      padding: 0 0 1.5rem 0;
+      color: var(--color-light-slate);
+      line-height: 1.7;
+    }
+
+    .accordion-content-inner ul {
+      list-style: none;
+      margin-top: 0.5rem;
+    }
+
+    .accordion-content-inner li {
+      padding: 0.35rem 0 0.35rem 1.5rem;
+      position: relative;
+    }
+
+    .accordion-content-inner li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--color-blue);
+      font-weight: 600;
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION: CONTACT
+       ═══════════════════════════════════════════ */
+    .contact-section {
+      padding: 6rem 0;
+      background: var(--color-navy);
+      color: var(--color-white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 10% 20%, rgba(4, 126, 175, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(189, 23, 33, 0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .contact-inner {
+      position: relative;
+      z-index: 2;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 4rem;
       align-items: start;
     }
 
+    .contact-info h2 {
+      color: var(--color-white);
+      margin-bottom: 1.5rem;
+    }
+
     .contact-info p {
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.7;
       margin-bottom: 2rem;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
 
     .contact-detail {
       display: flex;
+      align-items: center;
       gap: 1rem;
-      padding: 1.1rem 0;
-      border-top: 1px solid var(--gray-200);
+      padding: 1rem 1.25rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-md);
+      transition: all 0.2s;
     }
 
-    .contact-detail:last-child {
-      border-bottom: 1px solid var(--gray-200);
+    .contact-detail:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.2);
     }
 
     .contact-detail-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: var(--radius-base);
-      background: var(--blue-light);
-      color: var(--blue);
+      width: 40px;
+      height: 40px;
+      background: rgba(242, 190, 26, 0.15);
+      border: 1px solid rgba(242, 190, 26, 0.3);
+      border-radius: var(--radius-sm);
       display: grid;
       place-items: center;
+      color: var(--color-gold);
       flex-shrink: 0;
     }
 
-    .contact-detail-icon svg {
-      width: 16px;
-      height: 16px;
-    }
-
     .contact-detail-label {
-      font-size: 0.72rem;
-      text-transform: uppercase;
+      font-size: 0.7rem;
       letter-spacing: 0.1em;
-      color: var(--text-muted);
-      font-weight: 700;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.6);
       margin-bottom: 0.15rem;
     }
 
     .contact-detail-value {
-      font-size: 0.95rem;
       font-weight: 600;
-      color: var(--navy);
+      color: var(--color-white);
+      font-size: 0.95rem;
     }
 
-    .contact-form {
-      background: var(--white);
-      border: 1px solid var(--gray-200);
+    form {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: var(--radius-lg);
       padding: 2.5rem;
-      box-shadow: var(--shadow-sm);
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.25rem;
     }
 
     .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
+      margin-bottom: 1.25rem;
     }
 
     .form-group label {
-      font-size: 0.8rem;
-      font-weight: 700;
-      color: var(--navy);
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      margin-bottom: 0.5rem;
     }
 
     .form-group input,
     .form-group textarea {
       width: 100%;
-      padding: 0.85rem 1rem;
+      padding: 0.9rem 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-sm);
+      color: var(--color-white);
       font-family: var(--font-sans);
       font-size: 0.95rem;
-      color: var(--text);
-      background: var(--white);
-      border: 1px solid var(--gray-300);
-      border-radius: var(--radius-base);
-      outline: none;
-      transition: border-color var(--ease), box-shadow var(--ease);
+      transition: all 0.2s;
     }
 
     .form-group input:focus,
     .form-group textarea:focus {
-      border-color: var(--blue);
-      box-shadow: 0 0 0 3px rgba(14, 107, 168, 0.12);
-    }
-
-    .form-group textarea {
-      min-height: 130px;
-      resize: vertical;
+      outline: none;
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--color-gold);
+      box-shadow: 0 0 0 3px rgba(242, 190, 26, 0.1);
     }
 
     .form-group input::placeholder,
     .form-group textarea::placeholder {
-      color: var(--gray-300);
+      color: rgba(255, 255, 255, 0.4);
     }
 
-    .form-success {
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .btn-submit {
+      width: 100%;
+      background: var(--color-gold);
+      color: var(--color-navy);
+      padding: 1rem;
+      border: none;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: var(--font-sans);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .btn-submit:hover {
+      background: var(--color-white);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .success-message {
       display: none;
+      background: rgba(74, 222, 128, 0.1);
+      border: 1px solid rgba(74, 222, 128, 0.3);
+      border-radius: var(--radius-md);
+      padding: 2rem;
       text-align: center;
-      padding: 3rem 2rem;
-      background: var(--blue-light);
-      border-radius: var(--radius-lg);
-      border: 1px solid rgba(14, 107, 168, 0.2);
+      margin-top: 1rem;
     }
 
-    .form-success.is-visible {
+    .success-message.show {
       display: block;
+      animation: fadeIn 0.4s ease;
     }
 
-    .form-success-icon {
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .success-icon {
       width: 56px;
       height: 56px;
+      background: rgba(74, 222, 128, 0.2);
       border-radius: 50%;
-      background: var(--blue);
-      color: var(--white);
+      margin: 0 auto 1rem;
       display: grid;
       place-items: center;
-      margin: 0 auto 1.25rem;
+      color: #4ade80;
     }
 
-    .form-success h3 {
-      color: var(--navy);
+    .success-message h3 {
+      color: var(--color-white);
       margin-bottom: 0.5rem;
     }
 
-    .form-success p {
-      color: var(--text-soft);
-      margin: 0 auto;
-      max-width: 400px;
+    .success-message p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.9rem;
     }
 
-    /* ═══ RELATED / NEWS ═══ */
-    .news-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-
-    .news-card {
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: transform var(--ease), box-shadow var(--ease);
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .news-card:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .news-card-thumb {
-      aspect-ratio: 16 / 9;
-      background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .news-card-thumb::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
-      background-size: 24px 24px;
-    }
-
-    .news-card-thumb--alt1 { background: linear-gradient(135deg, var(--blue) 0%, var(--navy-soft) 100%); }
-    .news-card-thumb--alt2 { background: linear-gradient(135deg, var(--red) 0%, var(--navy) 100%); }
-
-    .news-card-body {
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-    }
-
-    .news-card-tag {
-      font-size: 0.7rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--blue);
-      margin-bottom: 0.5rem;
-    }
-
-    .news-card h3 {
-      font-size: 1.05rem;
-      line-height: 1.35;
-      color: var(--navy);
-      margin-bottom: 0.75rem;
-      flex-grow: 1;
-    }
-
-    .news-card-arrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--blue);
-    }
-
-    .news-card-arrow svg {
-      width: 14px;
-      height: 14px;
-    }
-
-    /* ═══ FOOTER ═══ */
-    .site-footer {
-      background: var(--navy);
-      color: var(--white);
+    /* ═══════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════ */
+    footer {
+      background: #0a0a1f;
+      color: rgba(255, 255, 255, 0.7);
       padding: 4rem 0 2rem;
     }
 
-    .footer-cta {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1.5rem;
-      padding-bottom: 3rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-      margin-bottom: 3rem;
-    }
-
-    .footer-cta h2 {
-      color: var(--white);
-      font-size: clamp(1.4rem, 2.5vw, 2rem);
-      max-width: 520px;
-    }
-
-    .footer-cta-actions {
-      display: flex;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-    }
-
-    .footer-main {
+    .footer-top {
       display: grid;
-      grid-template-columns: 1.4fr repeat(3, 1fr);
+      grid-template-columns: 2fr 1fr 1fr 1fr;
       gap: 3rem;
       padding-bottom: 3rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    .footer-brand .brand-mark {
-      background: var(--white);
-      color: var(--navy);
-    }
-
-    .footer-brand .brand-name {
-      color: var(--white);
-    }
-
-    .footer-brand .brand-sub {
-      color: rgba(255, 255, 255, 0.55);
-      margin-top: 1rem;
-      max-width: 260px;
-      font-size: 0.85rem;
-    }
-
-    .footer-col h4 {
-      color: var(--white);
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
+    .footer-brand .logo-mark {
       margin-bottom: 1rem;
-      font-weight: 800;
     }
 
-    .footer-col ul {
+    .footer-brand p {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      max-width: 320px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .footer-column h4 {
+      color: var(--color-white);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-column ul {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 0.6rem;
+      gap: 0.5rem;
     }
 
-    .footer-col a {
-      color: rgba(255, 255, 255, 0.68);
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: color var(--ease);
+    .footer-column a {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.88rem;
+      transition: color 0.2s;
     }
 
-    .footer-col a:hover {
-      color: var(--white);
+    .footer-column a:hover {
+      color: var(--color-gold);
     }
 
     .footer-bottom {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 1rem;
       padding-top: 2rem;
-      font-size: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.82rem;
       color: rgba(255, 255, 255, 0.5);
     }
 
-    .footer-bottom a {
-      color: rgba(255, 255, 255, 0.7);
-      text-decoration: none;
-    }
-    .footer-bottom a:hover {
-      color: var(--white);
+    .footer-legal {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
     }
 
-    /* ═══ RESPONSIVE ═══ */
-    @media (max-width: 1024px) {
-      .pillars-grid {
+    .footer-legal a {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer-legal a:hover {
+      color: var(--color-gold);
+    }
+
+    /* ═══════════════════════════════════════════
+       RESPONSIVE
+       ═══════════════════════════════════════════ */
+    @media (max-width: 968px) {
+      .hero-inner,
+      .focus-layout,
+      .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .pillars-grid,
+      .projects-grid {
         grid-template-columns: 1fr;
       }
-      .pillar-card {
-        min-height: auto;
+
+      .usp-grid {
+        grid-template-columns: 1fr;
       }
-      .news-grid {
+
+      .usp-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .people-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-top {
         grid-template-columns: 1fr 1fr;
       }
-      .footer-main {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
 
-    @media (max-width: 860px) {
-      section { padding: 3.5rem 0; }
-      .hero { padding: 5rem 0 4rem; }
-
-      .header-nav ul {
+      .nav-links-main {
         display: none;
       }
-
-      .intro-grid,
-      .focus-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-      }
-
-      .form-row {
-        grid-template-columns: 1fr;
-      }
-
-      .news-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-main {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-
-      .hero-meta {
-        gap: 1.75rem;
-      }
     }
 
-    @media (max-width: 520px) {
-      .hero-actions {
-        flex-direction: column;
-        align-items: stretch;
+    @media (max-width: 600px) {
+      .hero {
+        padding: 4rem 0 5rem;
       }
-      .hero-actions .btn {
-        width: 100%;
-      }
-      .focus-stats {
-        grid-template-columns: 1fr;
-      }
-      .form-grid {
-        grid-template-columns: 1fr;
-      }
-      .contact-form {
+
+      .hero-stats {
         padding: 1.5rem;
       }
-      .brand-sub {
+
+      .people-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-legal {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .top-bar-links {
         display: none;
+      }
+    }
+
+    /* ═══════════════════════════════════════════
+       UTILITIES
+       ═══════════════════════════════════════════ */
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- ═══ HEADER ═══ -->
-  <header class="site-header" id="site-header">
-    <div class="container header-inner">
-      <a href="#" class="brand" aria-label="ICCC home">
-        <span class="brand-mark">iCCC³</span>
-        <span class="brand-text">
-          <span class="brand-name">ICCC</span>
-          <span class="brand-sub" data-i18n="brand_sub">Institute for Cyber-defence, Cross-border IP &amp; Collaborative Tech</span>
-        </span>
-      </a>
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <ul class="top-bar-links">
+        <li><a href="#" data-i18n="top_directors">Directors Portal</a></li>
+        <li><a href="#" data-i18n="top_partners">Partner Network</a></li>
+        <li><a href="#" data-i18n="top_research">Research Repository</a></li>
+      </ul>
+      <div class="lang-switch-top" role="group" aria-label="Language selection">
+        <button class="lang-btn-top active" data-lang="en" aria-pressed="true">EN</button>
+        <button class="lang-btn-top" data-lang="fr" aria-pressed="false">FR</button>
+      </div>
+    </div>
+  </div>
 
-      <nav class="header-nav" aria-label="Primary">
-        <ul>
+  <!-- MAIN HEADER -->
+  <header class="main-header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <div class="logo-mark">iCCC³</div>
+        <div class="logo-text">
+          <span class="logo-title">ICCC</span>
+          <span class="logo-sub" data-i18n="logo_sub">Institute for Cyber-defence, Cross-border IP & Collaborative Tech</span>
+        </div>
+      </a>
+      <nav class="nav-main">
+        <ul class="nav-links-main">
           <li><a href="#pillars" data-i18n="nav_pillars">Pillars</a></li>
-          <li><a href="#focus" data-i18n="nav_focus">Focus</a></li>
-          <li><a href="#team" data-i18n="nav_team">Team</a></li>
+          <li><a href="#focus" data-i18n="nav_focus">Jurisdiction</a></li>
+          <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+          <li><a href="#leadership" data-i18n="nav_leadership">Leadership</a></li>
           <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
         </ul>
+        <a href="#contact" class="btn-primary" data-i18n="nav_cta">
+          <span>Initiate Dialogue</span>
+          <span>→</span>
+        </a>
       </nav>
-
-      <div class="lang-switch" role="group" aria-label="Language selection">
-        <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
-        <button class="lang-btn" data-lang="fr" aria-pressed="false">FR</button>
-      </div>
     </div>
   </header>
 
-  <!-- ═══ BREADCRUMB ═══ -->
+  <!-- BREADCRUMB -->
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <div class="container">
-      <ul>
-        <li><a href="#" data-i18n="crumb_home">Home</a></li>
-        <li><a href="#" data-i18n="crumb_research">Research</a></li>
-        <li><a href="#" data-i18n="crumb_institutes">Institutes</a></li>
-        <li aria-current="page" data-i18n="crumb_current">ICCC</li>
+      <ul class="breadcrumb-list">
+        <li><a href="#" data-i18n="bc_home">Home</a></li>
+        <li><a href="#" data-i18n="bc_institutes">Research Institutes</a></li>
+        <li aria-current="page" data-i18n="bc_current">ICCC</li>
       </ul>
     </div>
   </nav>
 
   <main>
-
-    <!-- ═══ HERO ═══ -->
+    <!-- HERO SECTION -->
     <section class="hero">
-      <div class="container hero-inner">
-        <div class="eyebrow eyebrow--light" data-i18n="hero_eyebrow">2026 · EMEA &amp; Ukraine</div>
-        <h1 data-i18n="hero_title">Institute for Cyber-defence, Cross-border IP &amp; Collaborative Tech</h1>
-        <p class="hero-subtitle" data-i18n="hero_subtitle">Bridging EMEA and Ukraine through resilient DefenceTech, legal sovereignty, and mutual technological exchange.</p>
+      <div class="container">
+        <div class="hero-inner">
+          <div>
+            <div class="hero-tag" data-i18n="hero_kicker">Research Institute · Est. 2026</div>
+            <h1 data-i18n="hero_title">Sovereign Tech, <span class="highlight">Borderless IP</span> & Collaborative Defence.</h1>
+            <p class="hero-desc" data-i18n="hero_desc">Bridging EMEA and Ukraine through resilient DefenceTech, legal sovereignty, and mutual technological exchange. We operate at the intersection of law, technology, and national security.</p>
+            <div class="hero-actions">
+              <a href="#contact" class="btn-hero" data-i18n="hero_cta">
+                <span>Initiate Dialogue</span>
+                <span>→</span>
+              </a>
+              <a href="#pillars" class="btn-hero-outline" data-i18n="hero_cta2">
+                <span>Explore Framework</span>
+              </a>
+            </div>
+          </div>
 
-        <div class="hero-actions">
-          <a href="#contact" class="btn btn--light" data-i18n="hero_cta_primary">Initiate Dialogue</a>
-          <a href="#pillars" class="btn btn--ghost-light" data-i18n="hero_cta_secondary">Explore Framework</a>
-        </div>
-
-        <div class="hero-meta">
-          <div class="hero-meta-item">
-            <span class="hero-meta-value">EMEA + UA</span>
-            <span class="hero-meta-label" data-i18n="hero_meta_1">Jurisdictions</span>
-          </div>
-          <div class="hero-meta-item">
-            <span class="hero-meta-value">AES-256</span>
-            <span class="hero-meta-label" data-i18n="hero_meta_2">Encryption</span>
-          </div>
-          <div class="hero-meta-item">
-            <span class="hero-meta-value">ISO / GDPR</span>
-            <span class="hero-meta-label" data-i18n="hero_meta_3">Compliance</span>
-          </div>
-          <div class="hero-meta-item">
-            <span class="hero-meta-value" data-i18n="hero_meta_4_value">Active</span>
-            <span class="hero-meta-label" data-i18n="hero_meta_4">Status</span>
+          <div class="hero-stats">
+            <div class="hero-stats-title" data-i18n="stats_title">Operational Status</div>
+            <div class="stat-row">
+              <span class="stat-label" data-i18n="stat_1_label">Status</span>
+              <span class="stat-badge">● ACTIVE</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label" data-i18n="stat_2_label">Jurisdictions</span>
+              <span class="stat-value accent">EMEA / UA</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label" data-i18n="stat_3_label">Compliance</span>
+              <span class="stat-value">ISO / GDPR / UA</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label" data-i18n="stat_4_label">Encryption</span>
+              <span class="stat-value">AES-256 / TLS 1.3</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label" data-i18n="stat_5_label">Response</span>
+              <span class="stat-value">48 hours</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══ INTRO / ABOUT ═══ -->
-    <section class="section--light">
+    <!-- USP SECTION (Lancashire style) -->
+    <section class="usp-section">
       <div class="container">
-        <div class="intro-grid">
-          <div class="intro-body reveal">
-            <div class="eyebrow" data-i18n="intro_eyebrow">About the Institute</div>
-            <h2 data-i18n="intro_title">Sovereign technology for a connected world.</h2>
-            <div style="margin-top: 1.5rem;">
-              <p data-i18n="intro_p1">ICCC is a research and knowledge-exchange institute operating at the intersection of cyber-defence, cross-border intellectual property, and collaborative technology. We connect academic rigour with operational expertise across EMEA and Ukraine.</p>
-              <p data-i18n="intro_p2">Our work is rooted in the belief that technological sovereignty and international collaboration are not opposing forces — they are mutually reinforcing conditions for a secure, prosperous digital future.</p>
-            </div>
-
-            <div class="reveal-more" id="intro-more">
-              <p data-i18n="intro_p3">We partner with governments, defence agencies, universities, and private-sector innovators to design frameworks that protect critical infrastructure, enable lawful technology transfer, and multiply the value of shared research.</p>
-              <p data-i18n="intro_p4">From legal interoperability studies to joint R&amp;D programmes, ICCC provides the institutional infrastructure — and the trusted networks — that allow sovereign entities to collaborate without compromising integrity.</p>
-            </div>
-
-            <button class="read-more-btn" id="read-more-btn" aria-expanded="false" aria-controls="intro-more" data-i18n="intro_read_more">
-              Read more
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-          </div>
-
-          <aside class="info-panel reveal reveal--d1">
-            <h3 data-i18n="info_panel_title">At a Glance</h3>
-            <dl>
-              <div>
-                <dt data-i18n="info_label_1">Founded</dt>
-                <dd>2026</dd>
-              </div>
-              <div>
-                <dt data-i18n="info_label_2">Primary Region</dt>
-                <dd>EMEA &amp; Ukraine</dd>
-              </div>
-              <div>
-                <dt data-i18n="info_label_3">Core Disciplines</dt>
-                <dd data-i18n="info_value_3">Cyber-defence · IP Law · Collaborative R&amp;D</dd>
-              </div>
-              <div>
-                <dt data-i18n="info_label_4">Operational Status</dt>
-                <dd style="color: var(--blue);">● <span data-i18n="info_value_4">Active</span></dd>
-              </div>
-              <div>
-                <dt data-i18n="info_label_5">Contact</dt>
-                <dd><a href="mailto:directors@ICCC.institute" style="color: var(--blue); text-decoration: none;">directors@ICCC.institute</a></dd>
-              </div>
-            </dl>
-          </aside>
-        </div>
+        <ul class="usp-grid">
+          <li class="usp-item">
+            <div class="usp-number">i</div>
+            <h3 class="usp-title" data-i18n="usp_1_title">Cyber-defence</h3>
+            <p class="usp-desc" data-i18n="usp_1_desc">Active DefenceTech resilience and critical infrastructure protection across borders.</p>
+          </li>
+          <li class="usp-item">
+            <div class="usp-number">ii</div>
+            <h3 class="usp-title" data-i18n="usp_2_title">Cross-border IP</h3>
+            <p class="usp-desc" data-i18n="usp_2_desc">Legal and technological sovereignty during rights transfer between EMEA and Ukraine.</p>
+          </li>
+          <li class="usp-item">
+            <div class="usp-number">iii</div>
+            <h3 class="usp-title" data-i18n="usp_3_title">Collaborative Tech</h3>
+            <p class="usp-desc" data-i18n="usp_3_desc">Joint R&D frameworks and secure knowledge transfer between allied nations.</p>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <!-- ═══ THREE PILLARS ═══ -->
-    <section class="section--navy" id="pillars">
+    <!-- PILLARS SECTION -->
+    <section id="pillars" class="pillars-section">
       <div class="container">
-        <div class="pillars-header reveal">
-          <div class="eyebrow eyebrow--light" data-i18n="pillars_eyebrow">Our Framework</div>
+        <div class="section-header">
+          <div class="section-kicker" data-i18n="pillars_kicker">Our Framework</div>
           <h2 data-i18n="pillars_title">The Three Pillars of Sovereign Exchange</h2>
-          <p style="margin-top: 1rem; color: rgba(255,255,255,0.72);" data-i18n="pillars_desc">A unified framework designed to protect, transfer, and multiply technological value across borders without compromising legal or operational integrity.</p>
+          <p class="section-desc" data-i18n="pillars_desc">A unified framework designed to protect, transfer, and multiply technological value across borders without compromising legal or operational integrity.</p>
         </div>
 
         <div class="pillars-grid">
-          <article class="pillar-card pillar-card--navy reveal reveal--d1">
-            <div class="pillar-index" data-i18n="pillar1_index">01 · DefenceTech</div>
-            <h3 data-i18n="pillar1_title">Cyber-defence</h3>
-            <p data-i18n="pillar1_desc">Shifting the paradigm from civil security to active DefenceTech resilience and critical infrastructure protection.</p>
-            <a href="#contact" class="pillar-link" data-i18n="pillar_link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <article class="pillar-card">
+            <div class="pillar-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036V11.25a2.25 2.25 0 01-2.25 2.25H7.5A2.25 2.25 0 015.25 11.25V5.714c0-.464.14-.915.403-1.297L8.36 1.36a.75.75 0 011.28 0l2.707 3.057c.263.382.403.833.403 1.297z"/>
+              </svg>
+            </div>
+            <span class="pillar-tag" data-i18n="c1_tag">01 · DEFENCETECH</span>
+            <h3 data-i18n="c1_title">Cyber-defence</h3>
+            <p data-i18n="c1_desc">Shifting the paradigm from civil security to active DefenceTech resilience and critical infrastructure protection. Our research focuses on threat detection, secure protocols, and national cyber-defence frameworks.</p>
           </article>
 
-          <article class="pillar-card pillar-card--blue reveal reveal--d2">
-            <div class="pillar-index" data-i18n="pillar2_index">02 · Sovereignty</div>
-            <h3 data-i18n="pillar2_title">Cross-border IP</h3>
-            <p data-i18n="pillar2_desc">Ensuring legal and technological sovereignty during rights transfer and licensing between EMEA and Ukrainian jurisdictions.</p>
-            <a href="#contact" class="pillar-link" data-i18n="pillar_link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <article class="pillar-card">
+            <div class="pillar-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/>
+              </svg>
+            </div>
+            <span class="pillar-tag" data-i18n="c2_tag">02 · SOVEREIGNTY</span>
+            <h3 data-i18n="c2_title">Cross-border IP</h3>
+            <p data-i18n="c2_desc">Ensuring legal and technological sovereignty during rights transfer and licensing between EMEA and Ukrainian jurisdictions. We develop compliant frameworks for international IP protection.</p>
           </article>
 
-          <article class="pillar-card pillar-card--red reveal reveal--d3">
-            <div class="pillar-index" data-i18n="pillar3_index">03 · Tech Exchange</div>
-            <h3 data-i18n="pillar3_title">Collaborative Tech</h3>
-            <p data-i18n="pillar3_desc">Direct facilitation of mutual technological exchange, joint R&amp;D frameworks, and secure knowledge transfer.</p>
-            <a href="#contact" class="pillar-link" data-i18n="pillar_link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <article class="pillar-card">
+            <div class="pillar-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"/>
+              </svg>
+            </div>
+            <span class="pillar-tag" data-i18n="c3_tag">03 · TECH EXCHANGE</span>
+            <h3 data-i18n="c3_title">Collaborative Tech</h3>
+            <p data-i18n="c3_desc">Direct facilitation of mutual technological exchange, joint R&D frameworks, and secure knowledge transfer. We enable allied nations to build shared technological capabilities.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ═══ FOCUS / JURISDICTIONS ═══ -->
-    <section class="section--light" id="focus">
+    <!-- FOCUS SECTION -->
+    <section id="focus" class="focus-section">
       <div class="container">
-        <div class="focus-grid">
-          <div class="reveal">
-            <div class="eyebrow" data-i18n="focus_eyebrow">Our Reach</div>
+        <div class="focus-layout">
+          <div class="focus-content">
+            <div class="section-kicker" data-i18n="focus_kicker">Our Reach</div>
             <h2 data-i18n="focus_title">Jurisdictional Focus</h2>
-            <p style="margin-top: 1.25rem;" data-i18n="focus_desc">Operating at the intersection of European, Middle Eastern, African, and Ukrainian legal frameworks to guarantee uncompromised technological sovereignty. We specialise in navigating complex regulatory environments to enable seamless, lawful technology transfer.</p>
-            <div style="margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 0.6rem;">
-              <span style="display:inline-block; padding: 0.4rem 0.9rem; background: var(--blue-light); color: var(--blue-dark); border-radius: 999px; font-size: 0.8rem; font-weight: 700;">EU Compliance</span>
-              <span style="display:inline-block; padding: 0.4rem 0.9rem; background: var(--blue-light); color: var(--blue-dark); border-radius: 999px; font-size: 0.8rem; font-weight: 700;">UA Law</span>
-              <span style="display:inline-block; padding: 0.4rem 0.9rem; background: var(--blue-light); color: var(--blue-dark); border-radius: 999px; font-size: 0.8rem; font-weight: 700;">EMEA Framework</span>
-              <span style="display:inline-block; padding: 0.4rem 0.9rem; background: var(--blue-light); color: var(--blue-dark); border-radius: 999px; font-size: 0.8rem; font-weight: 700;">GDPR</span>
+            <p data-i18n="focus_desc_1">Operating at the intersection of European, Middle Eastern, African, and Ukrainian legal frameworks to guarantee uncompromised technological sovereignty.</p>
+            <p data-i18n="focus_desc_2">We specialize in navigating complex regulatory environments to enable seamless, lawful technology transfer while maintaining operational security and compliance with international standards.</p>
+            
+            <div class="focus-tags">
+              <span class="focus-tag">EU Compliance</span>
+              <span class="focus-tag">UA Law</span>
+              <span class="focus-tag">EMEA Framework</span>
+              <span class="focus-tag">NATO Standards</span>
             </div>
           </div>
 
-          <div class="focus-stats reveal reveal--d1">
-            <div class="stat-card">
-              <div class="stat-value">EMEA</div>
-              <div class="stat-label" data-i18n="stat_region">Region</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-value">UA</div>
-              <div class="stat-label" data-i18n="stat_partner">Partner</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-value" data-i18n="stat_value_3">Secured</div>
-              <div class="stat-label" data-i18n="stat_ip">IP Transfer</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-value" data-i18n="stat_value_4">Active</div>
-              <div class="stat-label" data-i18n="stat_protocols">Protocols</div>
+          <div class="focus-visual">
+            <div class="focus-visual-title" data-i18n="focus_vis_title">Strategic Alignment</div>
+            <div class="focus-map">
+              <div class="map-row">
+                <span class="map-label">REGION</span>
+                <span class="map-value">EMEA + Ukraine</span>
+              </div>
+              <div class="map-row">
+                <span class="map-label">IP TRANSFER</span>
+                <span class="map-value accent">Secured</span>
+              </div>
+              <div class="map-row">
+                <span class="map-label">TECH EXCHANGE</span>
+                <span class="map-value">Active Protocols</span>
+              </div>
+              <div class="map-row">
+                <span class="map-label">COMPLIANCE</span>
+                <span class="map-value accent">ISO / GDPR</span>
+              </div>
+              <div class="map-row">
+                <span class="map-label">PARTNERSHIPS</span>
+                <span class="map-value">12 Active</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══ ACCORDION / OPERATIONAL FRAMEWORK ═══ -->
-    <section class="section--alt">
-      <div class="container container--narrow">
-        <div class="reveal" style="margin-bottom: 2rem;">
-          <div class="eyebrow" data-i18n="accordion_eyebrow">Operational Framework</div>
-          <h2 data-i18n="accordion_title">How We Work</h2>
-        </div>
-
-        <div class="accordion reveal reveal--d1">
-          <details open>
-            <summary data-i18n="acc1_title">Legal &amp; Regulatory Alignment</summary>
-            <div class="accordion-content">
-              <p data-i18n="acc1_body">We map the legal interfaces between EMEA and Ukrainian jurisdictions, producing actionable frameworks for IP licensing, data transfer, and joint venture formation. Every engagement begins with a jurisdiction-specific compliance review.</p>
-            </div>
-          </details>
-          <details>
-            <summary data-i18n="acc2_title">Technical Due Diligence</summary>
-            <div class="accordion-content">
-              <p data-i18n="acc2_body">Our technical directors assess the security posture, infrastructure resilience, and interoperability of partner technologies. Findings are documented against ISO 27001 and NIST baselines, with remediation pathways where required.</p>
-            </div>
-          </details>
-          <details>
-            <summary data-i18n="acc3_title">Secure Knowledge Transfer</summary>
-            <div class="accordion-content">
-              <p data-i18n="acc3_body">We design and operate secure channels for technology exchange — including encrypted documentation vaults, cleared-personnel protocols, and staged IP release schedules — ensuring that sensitive knowledge moves only where it is lawfully permitted to go.</p>
-            </div>
-          </details>
-          <details>
-            <summary data-i18n="acc4_title">Joint R&amp;D Facilitation</summary>
-            <div class="accordion-content">
-              <p data-i18n="acc4_body">ICCC convenes academic and industrial partners around shared research agendas. We provide the governance structures, IP-sharing agreements, and project management scaffolding that let sovereign entities co-develop without ceding control.</p>
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ TEAM ═══ -->
-    <section class="section--light" id="team">
+    <!-- PROJECTS SECTION (Card grid like Lancashire slider) -->
+    <section id="projects" class="projects-section">
       <div class="container">
-        <div class="reveal" style="margin-bottom: 2.5rem; max-width: 640px;">
-          <div class="eyebrow" data-i18n="team_eyebrow">Our People</div>
-          <h2 data-i18n="team_title">Directors &amp; Research Leads</h2>
-          <p style="margin-top: 1rem;" data-i18n="team_desc">A cross-disciplinary team drawn from defence, law, engineering, and international relations.</p>
+        <div class="section-header">
+          <div class="section-kicker" data-i18n="proj_kicker">Active Initiatives</div>
+          <h2 data-i18n="proj_title">Featured Projects</h2>
+          <p class="section-desc" data-i18n="proj_desc">Our ongoing research programmes and operational initiatives advancing secure technology transfer.</p>
         </div>
 
-        <div class="team-grid">
-          <div class="person-card reveal reveal--d1">
-            <div class="person-avatar person-avatar--navy">AD</div>
-            <div class="person-name" data-i18n="person1_name">Dr. A. Dmytrenko</div>
-            <div class="person-role" data-i18n="person1_role">Director · Cyber-defence</div>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-image">
+              <div class="project-image-icon">
+                <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036V11.25a2.25 2.25 0 01-2.25 2.25H7.5A2.25 2.25 0 015.25 11.25V5.714c0-.464.14-.915.403-1.297L8.36 1.36a.75.75 0 011.28 0l2.707 3.057c.263.382.403.833.403 1.297z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="project-content">
+              <span class="project-tag">DefenceTech</span>
+              <h3 data-i18n="proj_1_title">Critical Infrastructure Shield</h3>
+              <p data-i18n="proj_1_desc">A joint research programme developing next-generation defensive protocols for Ukrainian energy and telecommunications infrastructure.</p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image">
+              <div class="project-image-icon">
+                <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/>
+                </svg>
+              </div>
+            </div>
+            <div class="project-content">
+              <span class="project-tag">Legal Framework</span>
+              <h3 data-i18n="proj_2_title">EMEA-UA IP Bridge</h3>
+              <p data-i18n="proj_2_desc">Development of a standardized framework for secure intellectual property licensing and transfer across European and Ukrainian jurisdictions.</p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image">
+              <div class="project-image-icon">
+                <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"/>
+                </svg>
+              </div>
+            </div>
+            <div class="project-content">
+              <span class="project-tag">R&D Exchange</span>
+              <h3 data-i18n="proj_3_title">Tech Corridor Initiative</h3>
+              <p data-i18n="proj_3_desc">A secure technology exchange corridor enabling allied nations to share cutting-edge defensive capabilities and research insights.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PEOPLE / LEADERSHIP -->
+    <section id="leadership" class="people-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker" data-i18n="lead_kicker">Our Directors</div>
+          <h2 data-i18n="lead_title">Institute Leadership</h2>
+          <p class="section-desc" data-i18n="lead_desc">Our leadership team brings together expertise in international law, cyber-defence, and cross-border technology transfer.</p>
+        </div>
+
+        <div class="people-grid">
+          <article class="person-card">
+            <div class="person-avatar">DK</div>
+            <h4 class="person-name" data-i18n="lead_1_name">Dr. Kovalenko</h4>
+            <p class="person-role" data-i18n="lead_1_role">Director of Cyber-defence Research</p>
+          </article>
+
+          <article class="person-card">
+            <div class="person-avatar">SM</div>
+            <h4 class="person-name" data-i18n="lead_2_name">Prof. Moreau</h4>
+            <p class="person-role" data-i18n="lead_2_role">Head of Cross-border IP Law</p>
+          </article>
+
+          <article class="person-card">
+            <div class="person-avatar">AH</div>
+            <h4 class="person-name" data-i18n="lead_3_name">Dr. Hassan</h4>
+            <p class="person-role" data-i18n="lead_3_role">EMEA Partnerships Director</p>
+          </article>
+
+          <article class="person-card">
+            <div class="person-avatar">LB</div>
+            <h4 class="person-name" data-i18n="lead_4_name">Dr. Bondar</h4>
+            <p class="person-role" data-i18n="lead_4_role">Chief Technology Officer</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCORDION / FAQ -->
+    <section class="accordion-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker" data-i18n="faq_kicker">Research Alignment</div>
+          <h2 data-i18n="faq_title">Our Strategic Framework</h2>
+        </div>
+
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-btn" aria-expanded="false">
+              <span data-i18n="faq_1_q">How does ICCC ensure legal sovereignty across jurisdictions?</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-content-inner" data-i18n="faq_1_a">
+                <p>We maintain dedicated legal teams specializing in EMEA, Ukrainian, and international IP law. Our framework includes:</p>
+                <ul>
+                  <li>Multi-jurisdictional compliance verification</li>
+                  <li>Secure IP transfer protocols</li>
+                  <li>Continuous regulatory monitoring</li>
+                  <li>Bilateral treaty alignment</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="person-card reveal reveal--d1">
-            <div class="person-avatar person-avatar--blue">LE</div>
-            <div class="person-name" data-i18n="person2_name">Prof. L. Eriksen</div>
-            <div class="person-role" data-i18n="person2_role">Director · Cross-border IP</div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" aria-expanded="false">
+              <span data-i18n="faq_2_q">What security standards does ICCC adhere to?</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-content-inner" data-i18n="faq_2_a">
+                <p>All ICCC operations comply with the highest international standards including:</p>
+                <ul>
+                  <li>ISO 27001 Information Security Management</li>
+                  <li>GDPR compliance for data protection</li>
+                  <li>NATO STANAG security protocols</li>
+                  <li>AES-256 encryption for all transmissions</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="person-card reveal reveal--d2">
-            <div class="person-avatar person-avatar--red">MK</div>
-            <div class="person-name" data-i18n="person3_name">Dr. M. Kovalenko</div>
-            <div class="person-role" data-i18n="person3_role">Director · Collaborative Tech</div>
-          </div>
-          <div class="person-card reveal reveal--d2">
-            <div class="person-avatar person-avatar--soft">SH</div>
-            <div class="person-name" data-i18n="person4_name">S. Haddad</div>
-            <div class="person-role" data-i18n="person4_role">Senior Research Fellow · EMEA Policy</div>
-          </div>
-          <div class="person-card reveal reveal--d3">
-            <div class="person-avatar person-avatar--navy">RB</div>
-            <div class="person-name" data-i18n="person5_name">R. Bennett</div>
-            <div class="person-role" data-i18n="person5_role">Head of Secure Operations</div>
-          </div>
-          <div class="person-card reveal reveal--d3">
-            <div class="person-avatar person-avatar--blue">OY</div>
-            <div class="person-name" data-i18n="person6_name">O. Yavorska</div>
-            <div class="person-role" data-i18n="person6_role">Research Lead · Technology Transfer</div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" aria-expanded="false">
+              <span data-i18n="faq_3_q">How can organisations engage with ICCC?</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-content-inner" data-i18n="faq_3_a">
+                <p>We welcome collaboration from government bodies, defence contractors, research institutions, and legal firms. Engagement typically involves:</p>
+                <ul>
+                  <li>Initial secure consultation (48-hour response)</li>
+                  <li>Jurisdictional alignment assessment</li>
+                  <li>Framework customization</li>
+                  <li>Ongoing operational partnership</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══ CONTACT ═══ -->
-    <section class="section--alt" id="contact">
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section">
       <div class="container">
-        <div class="contact-grid">
-          <div class="contact-info reveal">
-            <div class="eyebrow" data-i18n="contact_eyebrow">Get in Touch</div>
-            <h2 data-i18n="contact_title">Initiate Secure Dialogue</h2>
-            <p data-i18n="contact_desc">Reach out to our legal and technical directors for jurisdictional alignment, IP licensing frameworks, or collaborative R&amp;D opportunities.</p>
+        <div class="contact-inner">
+          <div class="contact-layout">
+            <div class="contact-info">
+              <div class="section-kicker" style="color: var(--color-gold);" data-i18n="contact_kicker">Secure Dialogue</div>
+              <h2 data-i18n="contact_title">Initiate Secure Dialogue</h2>
+              <p data-i18n="contact_desc">Reach out to our legal and technical directors for jurisdictional alignment, IP licensing frameworks, or collaborative R&D opportunities. All communications are encrypted end-to-end.</p>
 
-            <div class="contact-detail">
-              <div class="contact-detail-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              </div>
-              <div>
-                <div class="contact-detail-label" data-i18n="contact_time_label">Response Time</div>
-                <div class="contact-detail-value" data-i18n="contact_time_value">Within 48 hours</div>
+              <div class="contact-details">
+                <div class="contact-detail">
+                  <div class="contact-detail-icon">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="contact-detail-label" data-i18n="contact_time_label">Response Time</div>
+                    <div class="contact-detail-value" data-i18n="contact_time_value">Within 48 hours</div>
+                  </div>
+                </div>
+
+                <div class="contact-detail">
+                  <div class="contact-detail-icon">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="contact-detail-label" data-i18n="contact_enc_label">Encryption</div>
+                    <div class="contact-detail-value">TLS 1.3 · AES-256</div>
+                  </div>
+                </div>
+
+                <div class="contact-detail">
+                  <div class="contact-detail-icon">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/>
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="contact-detail-label" data-i18n="contact_loc_label">Jurisdiction</div>
+                    <div class="contact-detail-value" data-i18n="contact_loc_value">EMEA & Ukraine</div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="contact-detail">
-              <div class="contact-detail-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-              </div>
-              <div>
-                <div class="contact-detail-label" data-i18n="contact_enc_label">Encryption</div>
-                <div class="contact-detail-value">TLS 1.3 · AES-256</div>
-              </div>
-            </div>
-
-            <div class="contact-detail">
-              <div class="contact-detail-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </div>
-              <div>
-                <div class="contact-detail-label" data-i18n="contact_loc_label">Jurisdiction</div>
-                <div class="contact-detail-value" data-i18n="contact_loc_value">EMEA &amp; Ukraine</div>
-              </div>
-            </div>
-
-            <div class="contact-detail">
-              <div class="contact-detail-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              </div>
-              <div>
-                <div class="contact-detail-label" data-i18n="contact_email_label">Secure Email</div>
-                <div class="contact-detail-value">directors@ICCC.institute</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="reveal reveal--d1">
-            <form class="contact-form" id="contact-form" novalidate>
-              <div class="form-row">
+            <div>
+              <form id="contact-form">
                 <div class="form-group">
                   <label for="name" data-i18n="form_name">Full Name / Organisation</label>
                   <input type="text" id="name" name="name" required placeholder="Your name or organisation">
                 </div>
                 <div class="form-group">
                   <label for="email" data-i18n="form_email">Official Email</label>
-                  <input type="email" id="email" name="email" required placeholder="your@email.com">
+                  <input type="email" id="email" name="email" required placeholder="your@organisation.com">
                 </div>
-              </div>
-              <div class="form-group">
-                <label for="message" data-i18n="form_msg">Inquiry Details</label>
-                <textarea id="message" name="message" required placeholder="Tell us about your inquiry..."></textarea>
-              </div>
-              <div>
-                <button type="submit" class="btn btn--primary" style="width: 100%;" data-i18n="form_btn">Transmit Inquiry</button>
-              </div>
-            </form>
+                <div class="form-group">
+                  <label for="message" data-i18n="form_msg">Inquiry Details</label>
+                  <textarea id="message" name="message" required placeholder="Tell us about your inquiry..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit" data-i18n="form_btn">
+                  <span>Transmit Secure Inquiry</span>
+                  <span>→</span>
+                </button>
+              </form>
 
-            <div class="form-success" id="form-success">
-              <div class="form-success-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <div id="success-message" class="success-message">
+                <div class="success-icon">
+                  <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
+                  </svg>
+                </div>
+                <h3 data-i18n="success_title">Transmission Received</h3>
+                <p data-i18n="success_desc">Your inquiry has been logged securely. A director will respond within 48 hours.</p>
               </div>
-              <h3 data-i18n="success_title">Transmission Received</h3>
-              <p data-i18n="success_desc">Your inquiry has been logged securely. A director will respond within 48 hours.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- ═══ RELATED / NEWS ═══ -->
-    <section class="section--light">
-      <div class="container">
-        <div class="reveal" style="display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 1rem; margin-bottom: 2rem;">
-          <div>
-            <div class="eyebrow" data-i18n="news_eyebrow">Latest</div>
-            <h2 data-i18n="news_title">Institute News &amp; Updates</h2>
-          </div>
-          <a href="#" class="btn btn--outline" data-i18n="news_cta">View all</a>
-        </div>
-
-        <div class="news-grid">
-          <a href="#" class="news-card reveal reveal--d1">
-            <div class="news-card-thumb"></div>
-            <div class="news-card-body">
-              <div class="news-card-tag" data-i18n="news_tag">Announcement</div>
-              <h3 data-i18n="news1_title">ICCC publishes first EMEA–Ukraine IP transfer framework</h3>
-              <span class="news-card-arrow" data-i18n="news_read_more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-            </div>
-          </a>
-          <a href="#" class="news-card reveal reveal--d2">
-            <div class="news-card-thumb news-card-thumb--alt1"></div>
-            <div class="news-card-body">
-              <div class="news-card-tag" data-i18n="news_tag">Research</div>
-              <h3 data-i18n="news2_title">Joint cyber-defence exercise concludes with six-nation participation</h3>
-              <span class="news-card-arrow" data-i18n="news_read_more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-            </div>
-          </a>
-          <a href="#" class="news-card reveal reveal--d3">
-            <div class="news-card-thumb news-card-thumb--alt2"></div>
-            <div class="news-card-body">
-              <div class="news-card-tag" data-i18n="news_tag">Partnership</div>
-              <h3 data-i18n="news3_title">ICCC signs collaborative R&amp;D memorandum with Ukrainian technical university</h3>
-              <span class="news-card-arrow" data-i18n="news_read_more">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
   </main>
 
-  <!-- ═══ FOOTER ═══ -->
-  <footer class="site-footer">
+  <!-- FOOTER -->
+  <footer>
     <div class="container">
-      <div class="footer-cta">
-        <h2 data-i18n="footer_cta_title">Ready to explore sovereign technology collaboration?</h2>
-        <div class="footer-cta-actions">
-          <a href="#contact" class="btn btn--light" data-i18n="footer_cta_btn">Contact the Institute</a>
-          <a href="#pillars" class="btn btn--ghost-light" data-i18n="footer_cta_btn2">Our Framework</a>
-        </div>
-      </div>
-
-      <div class="footer-main">
+      <div class="footer-top">
         <div class="footer-brand">
-          <a href="#" class="brand" style="gap: 0.75rem;">
-            <span class="brand-mark">iCCC³</span>
-            <span class="brand-text">
-              <span class="brand-name">ICCC</span>
-            </span>
-          </a>
-          <p class="brand-sub" data-i18n="footer_brand">Institute for Cyber-defence, Cross-border IP &amp; Collaborative Tech. Bridging EMEA and Ukraine through resilient DefenceTech and legal sovereignty.</p>
+          <div class="logo-mark">IC³T</div>
+          <p data-i18n="footer_brand">Institute for Cyber-defence, Cross-border IP & Collaborative Tech. Bridging EMEA and Ukraine through resilient technology frameworks.</p>
         </div>
 
-        <div class="footer-col">
-          <h4 data-i18n="footer_nav_title">Navigate</h4>
+        <div class="footer-column">
+          <h4 data-i18n="footer_nav">Navigation</h4>
           <ul>
             <li><a href="#pillars" data-i18n="nav_pillars">Pillars</a></li>
-            <li><a href="#focus" data-i18n="nav_focus">Focus</a></li>
-            <li><a href="#team" data-i18n="nav_team">Team</a></li>
-            <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+            <li><a href="#focus" data-i18n="nav_focus">Jurisdiction</a></li>
+            <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+            <li><a href="#leadership" data-i18n="nav_leadership">Leadership</a></li>
           </ul>
         </div>
 
-        <div class="footer-col">
-          <h4 data-i18n="footer_resources_title">Resources</h4>
+        <div class="footer-column">
+          <h4 data-i18n="footer_research">Research</h4>
           <ul>
-            <li><a href="#" data-i18n="footer_link_research">Research Publications</a></li>
-            <li><a href="#" data-i18n="footer_link_frameworks">Legal Frameworks</a></li>
-            <li><a href="#" data-i18n="footer_link_policy">Policy Briefs</a></li>
+            <li><a href="#" data-i18n="footer_pubs">Publications</a></li>
+            <li><a href="#" data-i18n="footer_data">Data Repository</a></li>
+            <li><a href="#" data-i18n="footer_partners">Partners</a></li>
+            <li><a href="#" data-i18n="footer_collab">Collaborate</a></li>
           </ul>
         </div>
 
-        <div class="footer-col">
-          <h4 data-i18n="footer_legal_title">Legal</h4>
+        <div class="footer-column">
+          <h4 data-i18n="footer_legal">Legal</h4>
           <ul>
-            <li><a href="#" data-i18n="footer_link_privacy">Privacy Notice</a></li>
-            <li><a href="#" data-i18n="footer_link_terms">Terms of Use</a></li>
-            <li><a href="#" data-i18n="footer_link_access">Accessibility</a></li>
+            <li><a href="#" data-i18n="footer_privacy">Privacy Policy</a></li>
+            <li><a href="#" data-i18n="footer_terms">Terms of Use</a></li>
+            <li><a href="#" data-i18n="footer_cookies">Cookie Notice</a></li>
+            <li><a href="#" data-i18n="footer_access">Accessibility</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <span data-i18n="footer_copyright">© 2026 ICCC. All rights reserved.</span>
-        <span data-i18n="footer_legal_line">Institute for Cyber-defence, Cross-border IP &amp; Collaborative Tech.</span>
+        <p data-i18n="footer_copy">© 2026 ICCC. All rights reserved.</p>
+        <ul class="footer-legal">
+          <li><a href="#" data-i18n="footer_status">Operational Status: Active</a></li>
+          <li><a href="#">ISO 27001 Certified</a></li>
+        </ul>
       </div>
     </div>
   </footer>
 
-  <!-- ═══ JAVASCRIPT ═══ -->
+  <!-- JAVASCRIPT -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      /* ── Sticky header shadow ── */
-      const header = document.getElementById("site-header");
-      const onScroll = () => {
-        header.classList.toggle("is-scrolled", window.scrollY > 8);
-      };
-      window.addEventListener("scroll", onScroll, { passive: true });
-      onScroll();
-
-      /* ── Scroll reveal ── */
-      const revealEls = document.querySelectorAll(".reveal");
-      if ("IntersectionObserver" in window) {
-        const io = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("is-visible");
-              io.unobserve(entry.target);
+      // ═══ ACCORDION ═══
+      const accordionBtns = document.querySelectorAll('.accordion-btn');
+      accordionBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+          const content = btn.nextElementSibling;
+          
+          // Close all others
+          accordionBtns.forEach(otherBtn => {
+            if (otherBtn !== btn) {
+              otherBtn.setAttribute('aria-expanded', 'false');
+              otherBtn.nextElementSibling.style.maxHeight = null;
             }
           });
-        }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
-        revealEls.forEach((el) => io.observe(el));
-      } else {
-        revealEls.forEach((el) => el.classList.add("is-visible"));
-      }
 
-      /* ── Read more toggle ── */
-      const readMoreBtn = document.getElementById("read-more-btn");
-      const introMore = document.getElementById("intro-more");
-      if (readMoreBtn && introMore) {
-        readMoreBtn.addEventListener("click", () => {
-          const open = introMore.classList.toggle("is-open");
-          readMoreBtn.classList.toggle("is-open", open);
-          readMoreBtn.setAttribute("aria-expanded", String(open));
-          const label = readMoreBtn.firstChild;
-          if (label && label.nodeType === 3) {
-            label.textContent = open
-              ? (currentLang === "fr" ? "Lire moins" : "Read less")
-              : (currentLang === "fr" ? "Lire plus" : "Read more");
+          // Toggle current
+          btn.setAttribute('aria-expanded', !expanded);
+          if (!expanded) {
+            content.style.maxHeight = content.scrollHeight + 'px';
+          } else {
+            content.style.maxHeight = null;
           }
         });
-      }
+      });
 
-      /* ── Translations ── */
-      let currentLang = "en";
+      // ═══ FORM HANDLING ═══
+      const form = document.getElementById('contact-form');
+      const successMessage = document.getElementById('success-message');
 
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        form.style.display = 'none';
+        successMessage.classList.add('show');
+      });
+
+      // ═══ SMOOTH SCROLL ═══
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+      // ═══ TRANSLATIONS ═══
       const translations = {
         en: {
-          brand_sub: "Institute for Cyber-defence, Cross-border IP & Collaborative Tech",
+          top_directors: "Directors Portal",
+          top_partners: "Partner Network",
+          top_research: "Research Repository",
+          logo_sub: "Institute for Cyber-defence, Cross-border IP & Collaborative Tech",
           nav_pillars: "Pillars",
-          nav_focus: "Focus",
-          nav_team: "Team",
+          nav_focus: "Jurisdiction",
+          nav_projects: "Projects",
+          nav_leadership: "Leadership",
           nav_contact: "Contact",
-          crumb_home: "Home",
-          crumb_research: "Research",
-          crumb_institutes: "Institutes",
-          crumb_current: "ICCC",
-          hero_eyebrow: "Established 2026 · EMEA & Ukraine",
-          hero_title: "Institute for Cyber-defence, Cross-border IP & Collaborative Tech",
-          hero_subtitle: "Bridging EMEA and Ukraine through resilient DefenceTech, legal sovereignty, and mutual technological exchange.",
-          hero_cta_primary: "Initiate Dialogue",
-          hero_cta_secondary: "Explore Framework",
-          hero_meta_1: "Jurisdictions",
-          hero_meta_2: "Encryption",
-          hero_meta_3: "Compliance",
-          hero_meta_4: "Status",
-          hero_meta_4_value: "Active",
-          intro_eyebrow: "About the Institute",
-          intro_title: "Sovereign technology for a connected world.",
-          intro_p1: "ICCC is a research and knowledge-exchange institute operating at the intersection of cyber-defence, cross-border intellectual property, and collaborative technology. We connect academic rigour with operational expertise across EMEA and Ukraine.",
-          intro_p2: "Our work is rooted in the belief that technological sovereignty and international collaboration are not opposing forces — they are mutually reinforcing conditions for a secure, prosperous digital future.",
-          intro_p3: "We partner with governments, defence agencies, universities, and private-sector innovators to design frameworks that protect critical infrastructure, enable lawful technology transfer, and multiply the value of shared research.",
-          intro_p4: "From legal interoperability studies to joint R&D programmes, ICCC provides the institutional infrastructure — and the trusted networks — that allow sovereign entities to collaborate without compromising integrity.",
-          intro_read_more: "Read more",
-          info_panel_title: "At a Glance",
-          info_label_1: "Founded",
-          info_label_2: "Primary Region",
-          info_label_3: "Core Disciplines",
-          info_value_3: "Cyber-defence · IP Law · Collaborative R&D",
-          info_label_4: "Operational Status",
-          info_value_4: "Active",
-          info_label_5: "Contact",
-          pillars_eyebrow: "Our Framework",
+          nav_cta: "Initiate Dialogue",
+          bc_home: "Home",
+          bc_institutes: "Research Institutes",
+          bc_current: "ICCC",
+          hero_kicker: "Research Institute · Est. 2026",
+          hero_title: 'Sovereign Tech, <span class="highlight">Borderless IP</span> & Collaborative Defence.',
+          hero_desc: "Bridging EMEA and Ukraine through resilient DefenceTech, legal sovereignty, and mutual technological exchange. We operate at the intersection of law, technology, and national security.",
+          hero_cta: "Initiate Dialogue",
+          hero_cta2: "Explore Framework",
+          stats_title: "Operational Status",
+          stat_1_label: "Status",
+          stat_2_label: "Jurisdictions",
+          stat_3_label: "Compliance",
+          stat_4_label: "Encryption",
+          stat_5_label: "Response",
+          usp_1_title: "Cyber-defence",
+          usp_1_desc: "Active DefenceTech resilience and critical infrastructure protection across borders.",
+          usp_2_title: "Cross-border IP",
+          usp_2_desc: "Legal and technological sovereignty during rights transfer between EMEA and Ukraine.",
+          usp_3_title: "Collaborative Tech",
+          usp_3_desc: "Joint R&D frameworks and secure knowledge transfer between allied nations.",
+          pillars_kicker: "Our Framework",
           pillars_title: "The Three Pillars of Sovereign Exchange",
           pillars_desc: "A unified framework designed to protect, transfer, and multiply technological value across borders without compromising legal or operational integrity.",
-          pillar1_index: "01 · DefenceTech",
-          pillar1_title: "Cyber-defence",
-          pillar1_desc: "Shifting the paradigm from civil security to active DefenceTech resilience and critical infrastructure protection.",
-          pillar2_index: "02 · Sovereignty",
-          pillar2_title: "Cross-border IP",
-          pillar2_desc: "Ensuring legal and technological sovereignty during rights transfer and licensing between EMEA and Ukrainian jurisdictions.",
-          pillar3_index: "03 · Tech Exchange",
-          pillar3_title: "Collaborative Tech",
-          pillar3_desc: "Direct facilitation of mutual technological exchange, joint R&D frameworks, and secure knowledge transfer.",
-          pillar_link: "Learn more",
-          focus_eyebrow: "Our Reach",
+          c1_tag: "01 · DEFENCETECH",
+          c1_title: "Cyber-defence",
+          c1_desc: "Shifting the paradigm from civil security to active DefenceTech resilience and critical infrastructure protection. Our research focuses on threat detection, secure protocols, and national cyber-defence frameworks.",
+          c2_tag: "02 · SOVEREIGNTY",
+          c2_title: "Cross-border IP",
+          c2_desc: "Ensuring legal and technological sovereignty during rights transfer and licensing between EMEA and Ukrainian jurisdictions. We develop compliant frameworks for international IP protection.",
+          c3_tag: "03 · TECH EXCHANGE",
+          c3_title: "Collaborative Tech",
+          c3_desc: "Direct facilitation of mutual technological exchange, joint R&D frameworks, and secure knowledge transfer. We enable allied nations to build shared technological capabilities.",
+          focus_kicker: "Our Reach",
           focus_title: "Jurisdictional Focus",
-          focus_desc: "Operating at the intersection of European, Middle Eastern, African, and Ukrainian legal frameworks to guarantee uncompromised technological sovereignty. We specialise in navigating complex regulatory environments to enable seamless, lawful technology transfer.",
-          stat_region: "Region",
-          stat_partner: "Partner",
-          stat_value_3: "Secured",
-          stat_ip: "IP Transfer",
-          stat_value_4: "Active",
-          stat_protocols: "Protocols",
-          accordion_eyebrow: "Operational Framework",
-          accordion_title: "How We Work",
-          acc1_title: "Legal & Regulatory Alignment",
-          acc1_body: "We map the legal interfaces between EMEA and Ukrainian jurisdictions, producing actionable frameworks for IP licensing, data transfer, and joint venture formation. Every engagement begins with a jurisdiction-specific compliance review.",
-          acc2_title: "Technical Due Diligence",
-          acc2_body: "Our technical directors assess the security posture, infrastructure resilience, and interoperability of partner technologies. Findings are documented against ISO 27001 and NIST baselines, with remediation pathways where required.",
-          acc3_title: "Secure Knowledge Transfer",
-          acc3_body: "We design and operate secure channels for technology exchange — including encrypted documentation vaults, cleared-personnel protocols, and staged IP release schedules — ensuring that sensitive knowledge moves only where it is lawfully permitted to go.",
-          acc4_title: "Joint R&D Facilitation",
-          acc4_body: "ICCC convenes academic and industrial partners around shared research agendas. We provide the governance structures, IP-sharing agreements, and project management scaffolding that let sovereign entities co-develop without ceding control.",
-          team_eyebrow: "Our People",
-          team_title: "Directors & Research Leads",
-          team_desc: "A cross-disciplinary team drawn from defence, law, engineering, and international relations.",
-          person1_name: "Dr. A. Dmytrenko",
-          person1_role: "Director · Cyber-defence",
-          person2_name: "Prof. L. Eriksen",
-          person2_role: "Director · Cross-border IP",
-          person3_name: "Dr. M. Kovalenko",
-          person3_role: "Director · Collaborative Tech",
-          person4_name: "S. Haddad",
-          person4_role: "Senior Research Fellow · EMEA Policy",
-          person5_name: "R. Bennett",
-          person5_role: "Head of Secure Operations",
-          person6_name: "O. Yavorska",
-          person6_role: "Research Lead · Technology Transfer",
-          contact_eyebrow: "Get in Touch",
+          focus_desc_1: "Operating at the intersection of European, Middle Eastern, African, and Ukrainian legal frameworks to guarantee uncompromised technological sovereignty.",
+          focus_desc_2: "We specialize in navigating complex regulatory environments to enable seamless, lawful technology transfer while maintaining operational security and compliance with international standards.",
+          focus_vis_title: "Strategic Alignment",
+          proj_kicker: "Active Initiatives",
+          proj_title: "Featured Projects",
+          proj_desc: "Our ongoing research programmes and operational initiatives advancing secure technology transfer.",
+          proj_1_title: "Critical Infrastructure Shield",
+          proj_1_desc: "A joint research programme developing next-generation defensive protocols for Ukrainian energy and telecommunications infrastructure.",
+          proj_2_title: "EMEA-UA IP Bridge",
+          proj_2_desc: "Development of a standardized framework for secure intellectual property licensing and transfer across European and Ukrainian jurisdictions.",
+          proj_3_title: "Tech Corridor Initiative",
+          proj_3_desc: "A secure technology exchange corridor enabling allied nations to share cutting-edge defensive capabilities and research insights.",
+          lead_kicker: "Our Directors",
+          lead_title: "Institute Leadership",
+          lead_desc: "Our leadership team brings together expertise in international law, cyber-defence, and cross-border technology transfer.",
+          lead_1_name: "Dr. Kovalenko",
+          lead_1_role: "Director of Cyber-defence Research",
+          lead_2_name: "Prof. Moreau",
+          lead_2_role: "Head of Cross-border IP Law",
+          lead_3_name: "Dr. Hassan",
+          lead_3_role: "EMEA Partnerships Director",
+          lead_4_name: "Dr. Bondar",
+          lead_4_role: "Chief Technology Officer",
+          faq_kicker: "Research Alignment",
+          faq_title: "Our Strategic Framework",
+          faq_1_q: "How does ICCC ensure legal sovereignty across jurisdictions?",
+          faq_1_a: "<p>We maintain dedicated legal teams specializing in EMEA, Ukrainian, and international IP law. Our framework includes:</p><ul><li>Multi-jurisdictional compliance verification</li><li>Secure IP transfer protocols</li><li>Continuous regulatory monitoring</li><li>Bilateral treaty alignment</li></ul>",
+          faq_2_q: "What security standards does ICCC adhere to?",
+          faq_2_a: "<p>All ICCC operations comply with the highest international standards including:</p><ul><li>ISO 27001 Information Security Management</li><li>GDPR compliance for data protection</li><li>NATO STANAG security protocols</li><li>AES-256 encryption for all transmissions</li></ul>",
+          faq_3_q: "How can organisations engage with ICCC?",
+          faq_3_a: "<p>We welcome collaboration from government bodies, defence contractors, research institutions, and legal firms. Engagement typically involves:</p><ul><li>Initial secure consultation (48-hour response)</li><li>Jurisdictional alignment assessment</li><li>Framework customization</li><li>Ongoing operational partnership</li></ul>",
+          contact_kicker: "Secure Dialogue",
           contact_title: "Initiate Secure Dialogue",
-          contact_desc: "Reach out to our legal and technical directors for jurisdictional alignment, IP licensing frameworks, or collaborative R&D opportunities.",
+          contact_desc: "Reach out to our legal and technical directors for jurisdictional alignment, IP licensing frameworks, or collaborative R&D opportunities. All communications are encrypted end-to-end.",
           contact_time_label: "Response Time",
           contact_time_value: "Within 48 hours",
           contact_enc_label: "Encryption",
           contact_loc_label: "Jurisdiction",
           contact_loc_value: "EMEA & Ukraine",
-          contact_email_label: "Secure Email",
           form_name: "Full Name / Organisation",
           form_email: "Official Email",
           form_msg: "Inquiry Details",
-          form_btn: "Transmit Inquiry",
+          form_btn: "Transmit Secure Inquiry",
           success_title: "Transmission Received",
           success_desc: "Your inquiry has been logged securely. A director will respond within 48 hours.",
-          news_eyebrow: "Latest",
-          news_title: "Institute News & Updates",
-          news_cta: "View all",
-          news_tag: "Announcement",
-          news1_title: "ICCC publishes first EMEA–Ukraine IP transfer framework",
-          news2_title: "Joint cyber-defence exercise concludes with six-nation participation",
-          news3_title: "ICCC signs collaborative R&D memorandum with Ukrainian technical university",
-          news_read_more: "Read more",
-          footer_cta_title: "Ready to explore sovereign technology collaboration?",
-          footer_cta_btn: "Contact the Institute",
-          footer_cta_btn2: "Our Framework",
-          footer_brand: "Institute for Cyber-defence, Cross-border IP & Collaborative Tech. Bridging EMEA and Ukraine through resilient DefenceTech and legal sovereignty.",
-          footer_nav_title: "Navigate",
-          footer_resources_title: "Resources",
-          footer_link_research: "Research Publications",
-          footer_link_frameworks: "Legal Frameworks",
-          footer_link_policy: "Policy Briefs",
-          footer_legal_title: "Legal",
-          footer_link_privacy: "Privacy Notice",
-          footer_link_terms: "Terms of Use",
-          footer_link_access: "Accessibility",
-          footer_copyright: "© 2026 ICCC. All rights reserved.",
-          footer_legal_line: "Institute for Cyber-defence, Cross-border IP & Collaborative Tech."
+          footer_brand: "Institute for Cyber-defence, Cross-border IP & Collaborative Tech. Bridging EMEA and Ukraine through resilient technology frameworks.",
+          footer_nav: "Navigation",
+          footer_research: "Research",
+          footer_pubs: "Publications",
+          footer_data: "Data Repository",
+          footer_partners: "Partners",
+          footer_collab: "Collaborate",
+          footer_legal: "Legal",
+          footer_privacy: "Privacy Policy",
+          footer_terms: "Terms of Use",
+          footer_cookies: "Cookie Notice",
+          footer_access: "Accessibility",
+          footer_copy: "© 2026 ICCC. All rights reserved.",
+          footer_status: "Operational Status: Active"
         },
         fr: {
-          brand_sub: "Institut de Cyberdéfense, de PI Transfrontalière et de Technologies Collaboratives",
+          top_directors: "Portail des directeurs",
+          top_partners: "Réseau de partenaires",
+          top_research: "Dépôt de recherche",
+          logo_sub: "Institut de Cyberdéfense, de PI Transfrontalière et de Technologies Collaboratives",
           nav_pillars: "Piliers",
-          nav_focus: "Focus",
-          nav_team: "Équipe",
+          nav_focus: "Juridiction",
+          nav_projects: "Projets",
+          nav_leadership: "Direction",
           nav_contact: "Contact",
-          crumb_home: "Accueil",
-          crumb_research: "Recherche",
-          crumb_institutes: "Instituts",
-          crumb_current: "ICCC",
-          hero_eyebrow: "Établi en 2026 · EMEA & Ukraine",
-          hero_title: "Institut de Cyberdéfense, de PI Transfrontalière et de Technologies Collaboratives",
-          hero_subtitle: "Relier l'EMEA et l'Ukraine grâce à une DefenceTech résiliente, une souveraineté juridique et un échange technologique mutuel.",
-          hero_cta_primary: "Initier le dialogue",
-          hero_cta_secondary: "Explorer le cadre",
-          hero_meta_1: "Juridictions",
-          hero_meta_2: "Chiffrement",
-          hero_meta_3: "Conformité",
-          hero_meta_4: "Statut",
-          hero_meta_4_value: "Actif",
-          intro_eyebrow: "À propos de l'Institut",
-          intro_title: "Une technologie souveraine pour un monde connecté.",
-          intro_p1: "L'ICCC est un institut de recherche et d'échange de connaissances opérant à l'intersection de la cyberdéfense, de la propriété intellectuelle transfrontalière et des technologies collaboratives. Nous relions rigueur académique et expertise opérationnelle à travers l'EMEA et l'Ukraine.",
-          intro_p2: "Notre travail repose sur la conviction que la souveraineté technologique et la collaboration internationale ne sont pas des forces opposées — elles sont des conditions mutuellement renforçantes pour un avenir numérique sûr et prospère.",
-          intro_p3: "Nous collaborons avec des gouvernements, des agences de défense, des universités et des innovateurs du secteur privé pour concevoir des cadres qui protègent les infrastructures critiques, permettent un transfert technologique licite et multiplient la valeur de la recherche partagée.",
-          intro_p4: "Des études d'interopérabilité juridique aux programmes de R&D conjoints, l'ICCC fournit l'infrastructure institutionnelle — et les réseaux de confiance — qui permettent aux entités souveraines de collaborer sans compromettre leur intégrité.",
-          intro_read_more: "Lire plus",
-          info_panel_title: "En bref",
-          info_label_1: "Fondé",
-          info_label_2: "Région principale",
-          info_label_3: "Disciplines clés",
-          info_value_3: "Cyberdéfense · Droit de la PI · R&D collaborative",
-          info_label_4: "Statut opérationnel",
-          info_value_4: "Actif",
-          info_label_5: "Contact",
-          pillars_eyebrow: "Notre cadre",
+          nav_cta: "Initier le dialogue",
+          bc_home: "Accueil",
+          bc_institutes: "Instituts de recherche",
+          bc_current: "ICCC",
+          hero_kicker: "Institut de recherche · Étab. 2026",
+          hero_title: 'Technologie souveraine, <span class="highlight">PI sans frontières</span> & Défense collaborative.',
+          hero_desc: "Relier l'EMEA et l'Ukraine grâce à une DefenceTech résiliente, une souveraineté juridique et un échange technologique mutuel.",
+          hero_cta: "Initier le dialogue",
+          hero_cta2: "Explorer le cadre",
+          stats_title: "Statut opérationnel",
+          stat_1_label: "Statut",
+          stat_2_label: "Juridictions",
+          stat_3_label: "Conformité",
+          stat_4_label: "Chiffrement",
+          stat_5_label: "Réponse",
+          usp_1_title: "Cyberdéfense",
+          usp_1_desc: "Résilience active de la DefenceTech et protection des infrastructures critiques au-delà des frontières.",
+          usp_2_title: "PI Transfrontalière",
+          usp_2_desc: "Souveraineté juridique et technologique lors du transfert de droits entre l'EMEA et l'Ukraine.",
+          usp_3_title: "Technologies Collaboratives",
+          usp_3_desc: "Cadres de R&D conjoints et transfert sécurisé de connaissances entre nations alliées.",
+          pillars_kicker: "Notre Cadre",
           pillars_title: "Les Trois Piliers de l'Échange Souverain",
-          pillars_desc: "Un cadre unifié conçu pour protéger, transférer et multiplier la valeur technologique au-delà des frontières sans compromettre l'intégrité juridique ou opérationnelle.",
-          pillar1_index: "01 · DefenceTech",
-          pillar1_title: "Cyberdéfense",
-          pillar1_desc: "Faire évoluer le paradigme de la sécurité civile vers la résilience active de la DefenceTech et la protection des infrastructures critiques.",
-          pillar2_index: "02 · Souveraineté",
-          pillar2_title: "PI Transfrontalière",
-          pillar2_desc: "Garantir la souveraineté juridique et technologique lors du transfert et de l'octroi de licences entre les juridictions EMEA et l'Ukraine.",
-          pillar3_index: "03 · Échange Tech",
-          pillar3_title: "Technologies Collaboratives",
-          pillar3_desc: "Facilitation directe de l'échange technologique mutuel, des cadres de R&D conjoints et du transfert sécurisé de connaissances.",
-          pillar_link: "En savoir plus",
-          focus_eyebrow: "Notre portée",
+          pillars_desc: "Un cadre unifié conçu pour protéger, transférer et multiplier la valeur technologique au-delà des frontières.",
+          c1_tag: "01 · DEFENCETECH",
+          c1_title: "Cyberdéfense",
+          c1_desc: "Faire évoluer le paradigme de la sécurité civile vers la résilience active de la DefenceTech et la protection des infrastructures critiques.",
+          c2_tag: "02 · SOUVERAINETÉ",
+          c2_title: "PI Transfrontalière",
+          c2_desc: "Garantir la souveraineté juridique et technologique lors du transfert et de l'octroi de licences entre les juridictions EMEA et l'Ukraine.",
+          c3_tag: "03 · ÉCHANGE TECH",
+          c3_title: "Technologies Collaboratives",
+          c3_desc: "Facilitation directe de l'échange technologique mutuel, des cadres de R&D conjoints et du transfert sécurisé de connaissances.",
+          focus_kicker: "Notre Portée",
           focus_title: "Focus Juridictionnel",
-          focus_desc: "Opérer à l'intersection des cadres juridiques européen, moyen-oriental, africain et ukrainien pour garantir une souveraineté technologique sans compromis. Nous sommes spécialisés dans la navigation d'environnements réglementaires complexes afin de permettre un transfert technologique fluide et licite.",
-          stat_region: "Région",
-          stat_partner: "Partenaire",
-          stat_value_3: "Sécurisé",
-          stat_ip: "Transfert de PI",
-          stat_value_4: "Actif",
-          stat_protocols: "Protocoles",
-          accordion_eyebrow: "Cadre opérationnel",
-          accordion_title: "Notre méthode",
-          acc1_title: "Alignement juridique et réglementaire",
-          acc1_body: "Nous cartographions les interfaces juridiques entre les juridictions EMEA et ukrainiennes, en produisant des cadres opérationnels pour l'octroi de licences de PI, le transfert de données et la création de coentreprises. Chaque engagement commence par un examen de conformité spécifique à la juridiction.",
-          acc2_title: "Due diligence technique",
-          acc2_body: "Nos directeurs techniques évaluent la posture de sécurité, la résilience des infrastructures et l'interopérabilité des technologies partenaires. Les conclusions sont documentées par rapport aux référentiels ISO 27001 et NIST, avec des voies de remédiation le cas échéant.",
-          acc3_title: "Transfert sécurisé des connaissances",
-          acc3_body: "Nous concevons et exploitons des canaux sécurisés pour l'échange technologique — notamment des coffres-forts documentaires chiffrés, des protocoles pour personnel habilité et des calendriers de libération progressive de la PI — en veillant à ce que les connaissances sensibles ne circulent que là où elles sont légalement autorisées.",
-          acc4_title: "Facilitation de R&D conjointe",
-          acc4_body: "L'ICCC réunit des partenaires académiques et industriels autour d'agendas de recherche partagés. Nous fournissons les structures de gouvernance, les accords de partage de PI et l'échafaudage de gestion de projet qui permettent aux entités souveraines de co-développer sans céder le contrôle.",
-          team_eyebrow: "Notre équipe",
-          team_title: "Directeurs & Responsables de Recherche",
-          team_desc: "Une équipe pluridisciplinaire issue de la défense, du droit, de l'ingénierie et des relations internationales.",
-          person1_name: "Dr A. Dmytrenko",
-          person1_role: "Directeur · Cyberdéfense",
-          person2_name: "Pr L. Eriksen",
-          person2_role: "Directrice · PI Transfrontalière",
-          person3_name: "Dr M. Kovalenko",
-          person3_role: "Directeur · Technologies Collaboratives",
-          person4_name: "S. Haddad",
-          person4_role: "Chercheur senior · Politique EMEA",
-          person5_name: "R. Bennett",
-          person5_role: "Responsable des opérations sécurisées",
-          person6_name: "O. Yavorska",
-          person6_role: "Responsable de recherche · Transfert de technologie",
-          contact_eyebrow: "Contactez-nous",
+          focus_desc_1: "Opérer à l'intersection des cadres juridiques européen, moyen-oriental, africain et ukrainien.",
+          focus_desc_2: "Nous sommes spécialisés dans la navigation d'environnements réglementaires complexes.",
+          focus_vis_title: "Alignement Stratégique",
+          proj_kicker: "Initiatives Actives",
+          proj_title: "Projets en Vedette",
+          proj_desc: "Nos programmes de recherche et initiatives opérationnelles en cours.",
+          proj_1_title: "Bouclier d'Infrastructure Critique",
+          proj_1_desc: "Un programme de recherche conjoint développant des protocoles défensifs de nouvelle génération.",
+          proj_2_title: "Pont PI EMEA-UA",
+          proj_2_desc: "Développement d'un cadre standardisé pour l'octroi de licences de propriété intellectuelle sécurisées.",
+          proj_3_title: "Initiative du Corridor Technologique",
+          proj_3_desc: "Un corridor d'échange technologique sécurisé permettant aux nations alliées de partager des capacités.",
+          lead_kicker: "Nos Directeurs",
+          lead_title: "Direction de l'Institut",
+          lead_desc: "Notre équipe de direction réunit une expertise en droit international, cyberdéfense et transfert technologique.",
+          lead_1_name: "Dr. Kovalenko",
+          lead_1_role: "Directeur de la Recherche en Cyberdéfense",
+          lead_2_name: "Prof. Moreau",
+          lead_2_role: "Responsable du Droit de la PI Transfrontalière",
+          lead_3_name: "Dr. Hassan",
+          lead_3_role: "Directeur des Partenariats EMEA",
+          lead_4_name: "Dr. Bondar",
+          lead_4_role: "Directeur Technique",
+          faq_kicker: "Alignement de Recherche",
+          faq_title: "Notre Cadre Stratégique",
+          faq_1_q: "Comment ICCC assure-t-il la souveraineté juridique ?",
+          faq_1_a: "<p>Nous maintenons des équipes juridiques dédiées. Notre cadre comprend :</p><ul><li>Vérification de conformité multi-juridictionnelle</li><li>Protocoles de transfert de PI sécurisés</li><li>Surveillance réglementaire continue</li><li>Alignement sur les traités bilatéraux</li></ul>",
+          faq_2_q: "À quelles normes de sécurité ICCC adhère-t-il ?",
+          faq_2_a: "<p>Toutes les opérations ICCC respectent les normes les plus élevées :</p><ul><li>ISO 27001</li><li>Conformité RGPD</li><li>Protocoles STANAG de l'OTAN</li><li>Chiffrement AES-256</li></ul>",
+          faq_3_q: "Comment les organisations peuvent-elles s'engager avec ICCC ?",
+          faq_3_a: "<p>Nous accueillons la collaboration. L'engagement implique généralement :</p><ul><li>Consultation initiale sécurisée</li><li>Évaluation d'alignement juridictionnel</li><li>Personnalisation du cadre</li><li>Partenariat opérationnel continu</li></ul>",
+          contact_kicker: "Dialogue Sécurisé",
           contact_title: "Initier un dialogue sécurisé",
-          contact_desc: "Contactez nos directeurs juridiques et techniques pour l'alignement juridictionnel, les cadres de licence de PI ou les opportunités de R&D collaboratif.",
+          contact_desc: "Contactez nos directeurs juridiques et techniques. Toutes les communications sont chiffrées de bout en bout.",
           contact_time_label: "Temps de réponse",
           contact_time_value: "Sous 48 heures",
           contact_enc_label: "Chiffrement",
           contact_loc_label: "Juridiction",
           contact_loc_value: "EMEA & Ukraine",
-          contact_email_label: "E-mail sécurisé",
           form_name: "Nom complet / Organisation",
           form_email: "E-mail officiel",
           form_msg: "Détails de la demande",
           form_btn: "Transmettre la demande",
           success_title: "Transmission reçue",
-          success_desc: "Votre demande a été enregistrée en toute sécurité. Un directeur répondra sous 48 heures.",
-          news_eyebrow: "Actualités",
-          news_title: "Actualités & Mises à Jour de l'Institut",
-          news_cta: "Tout voir",
-          news_tag: "Annonce",
-          news1_title: "L'ICCC publie le premier cadre de transfert de PI EMEA–Ukraine",
-          news2_title: "Un exercice conjoint de cyberdéfense s'achève avec la participation de six nations",
-          news3_title: "L'ICCC signe un mémorandum de R&D collaborative avec une université technique ukrainienne",
-          news_read_more: "Lire la suite",
-          footer_cta_title: "Prêt à explorer la collaboration technologique souveraine ?",
-          footer_cta_btn: "Contacter l'Institut",
-          footer_cta_btn2: "Notre cadre",
-          footer_brand: "Institut de Cyberdéfense, de PI Transfrontalière et de Technologies Collaboratives. Relier l'EMEA et l'Ukraine grâce à une DefenceTech résiliente et une souveraineté juridique.",
-          footer_nav_title: "Navigation",
-          footer_resources_title: "Ressources",
-          footer_link_research: "Publications de recherche",
-          footer_link_frameworks: "Cadres juridiques",
-          footer_link_policy: "Notes d'orientation",
-          footer_legal_title: "Mentions légales",
-          footer_link_privacy: "Avis de confidentialité",
-          footer_link_terms: "Conditions d'utilisation",
-          footer_link_access: "Accessibilité",
-          footer_copyright: "© 2026 ICCC. Tous droits réservés.",
-          footer_legal_line: "Institut de Cyberdéfense, de PI Transfrontalière et de Technologies Collaboratives."
+          success_desc: "Votre demande a été enregistrée en toute sécurité.",
+          footer_brand: "Institut de Cyberdéfense, de PI Transfrontalière et de Technologies Collaboratives.",
+          footer_nav: "Navigation",
+          footer_research: "Recherche",
+          footer_pubs: "Publications",
+          footer_data: "Dépôt de Données",
+          footer_partners: "Partenaires",
+          footer_collab: "Collaborer",
+          footer_legal: "Légal",
+          footer_privacy: "Politique de Confidentialité",
+          footer_terms: "Conditions d'Utilisation",
+          footer_cookies: "Avis sur les Cookies",
+          footer_access: "Accessibilité",
+          footer_copy: "© 2026 ICCC. Tous droits réservés.",
+          footer_status: "Statut opérationnel : Actif"
         }
       };
 
-      const langButtons = document.querySelectorAll(".lang-btn");
+      const langBtns = document.querySelectorAll('.lang-btn-top');
 
       function setLanguage(lang) {
-        currentLang = lang;
         document.documentElement.lang = lang;
         const dict = translations[lang];
 
-        document.querySelectorAll("[data-i18n]").forEach((el) => {
-          const key = el.getAttribute("data-i18n");
-          if (dict[key] !== undefined) {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (dict[key]) {
             el.innerHTML = dict[key];
           }
         });
 
-        langButtons.forEach((btn) => {
-          const active = btn.dataset.lang === lang;
-          btn.classList.toggle("active", active);
-          btn.setAttribute("aria-pressed", String(active));
-        });
-
-        // Reset read-more label if open
-        if (readMoreBtn) {
-          const open = introMore && introMore.classList.contains("is-open");
-          const label = readMoreBtn.firstChild;
-          if (label && label.nodeType === 3) {
-            label.textContent = open
-              ? (lang === "fr" ? "Lire moins" : "Read less")
-              : (lang === "fr" ? "Lire plus" : "Read more");
+        langBtns.forEach(btn => {
+          if (btn.dataset.lang === lang) {
+            btn.classList.add('active');
+            btn.setAttribute('aria-pressed', 'true');
+          } else {
+            btn.classList.remove('active');
+            btn.setAttribute('aria-pressed', 'false');
           }
-        }
-      }
-
-      langButtons.forEach((btn) => {
-        btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
-      });
-
-      /* ── Contact form ── */
-      const form = document.getElementById("contact-form");
-      const success = document.getElementById("form-success");
-
-      if (form) {
-        form.addEventListener("submit", (e) => {
-          e.preventDefault();
-          form.style.display = "none";
-          success.classList.add("is-visible");
         });
       }
 
-      /* ── Smooth anchor scroll with header offset ── */
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", (e) => {
-          const targetId = anchor.getAttribute("href");
-          if (targetId.length < 2) return;
-          const target = document.querySelector(targetId);
-          if (!target) return;
-          e.preventDefault();
-          const offset = header ? header.offsetHeight : 0;
-          const top = target.getBoundingClientRect().top + window.scrollY - offset - 12;
-          window.scrollTo({ top, behavior: "smooth" });
+      langBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          setLanguage(btn.dataset.lang);
         });
       });
     });
